@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'gestion_epicerie',
+    'users_epicerie',
+    'admins_epicerie',
 ]
 
 MIDDLEWARE = [
@@ -134,4 +136,5 @@ import os
 
 # Pour la gestion des fichiers médias
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join('gestion_epicerie', 'static/image/')
+# MEDIA_ROOT = os.path.join('gestion_epicerie', 'static/image/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -23,9 +23,11 @@ from django.conf import settings
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('gestion_epicerie/', include('gestion_epicerie.urls')),
+    path('admins_epicerie/', include('admins_epicerie.urls')),
+    path('users_epicerie/', include('users_epicerie.urls')),
 ]
 
 
-# Ajoutez ceci pour gérer les fichiers médias
+# ceci pour gérer les fichiers médias
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

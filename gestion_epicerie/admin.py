@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Admin, AvisService, Utilisateur, Categorie, Produit, Note, AvisProduit, Commande, LigneCommande, Facture, Community, Messages, Recommandation
+from admins_epicerie.models import *
+from users_epicerie.models import *
+from .models import *
 
 # Admin configuration for Admin model
 class AdminAdmin(admin.ModelAdmin):
