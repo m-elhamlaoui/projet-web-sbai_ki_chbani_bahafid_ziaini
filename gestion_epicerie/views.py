@@ -11,10 +11,6 @@ from django.core.validators import EmailValidator
 import os
 
 
-# def connexion(request):
-#     return render(request, 'connexion.html')
-
-
 def connexion(request):
     if request.method == 'POST':
         pseudo = request.POST.get('pseudo')
@@ -67,7 +63,7 @@ def connexion(request):
                     utilisateur.status = 'CONNECTE'
                     utilisateur.save()
 
-                    return JsonResponse({'status': 0, 'url': '/utilisateur/dashboard/'})
+                    return JsonResponse({'status': 0, 'url': '/users_epicerie/'})
                 else:
                     return JsonResponse({'status': 'Votre mot de passe est incorrect !'})
 

@@ -1,0 +1,167 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="{% static 'css/stylefacture.css' %}">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'image/favicon-32x32.png' %}"/>
+
+    <title>FACTURE GESTEPICE!</title>
+</head>
+
+<body>
+    <div class="my-5 page" size="A4">
+        <div class="p-5">
+            <section class="top-content bb d-flex justify-content-between">
+                <div class="logo">
+                    <img src="{% static 'image/logoF.PNG' %}" alt="" class="img-fluid">
+                </div>
+                <div class="top-left">
+                    <div class="graphic-path">
+                        <p>Facture</p>
+                    </div>
+                    <div class="position-relative">
+                        <p> No Facture: <span>{{ num_facture }}</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="store-user mt-5">
+                <div class="col-10">
+                    <div class="row bb pb-3">
+                        <div class="col-7">
+                            <p>Fournisseur:</p>
+                            <h2>GestEpice</h2>
+                            <p class="address"> INPT, <br>  Madinat Al Irfane, <br>Rabat</p>
+                        </div>
+                        <div class="col-5">
+                            <p>Client:</p>
+                            <h2>{{ request.session.nom }} {{ request.session.prenom }}</h2>
+                            <p class="address">{{ request.session.email }}</p>
+                            <div class="txn mt-2">{{ request.session.telephone }}</div>
+                        </div>
+                    </div>
+                    <div class="row extra-info pt-3">
+                        <div class="col-7">
+                            <p>Commande Livre : <span>{{ status }}</span></p>
+                        </div>
+                        <div class="col-5">
+                            <p> Date Facture: <span>{{ date_facture }}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-area mt-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>Image Nom</td>
+                            <td>Prix unitaire</td>
+                            <td>Quantite</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for produit in produits %}
+                        <tr>
+                            <td>
+                                <div class="media">
+                                    <img class="mr-3 img-fluid" src="{{ produit.id_produit.image_produit.url }}" alt="Product 01">
+                                    <div class="media-body">
+                                        <p class="mt-0 title">{{ produit.id_produit.nom_produit }}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{ produit.id_produit.prix_promotion }} DH</td>
+                            <td>{{ produit.qte }}</td>
+                            <td>{{ produit.prix_produit }} DH</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="balance-info">
+                <div class="row">
+                    <div class="col-8">
+                        <p class="m-0 font-weight-bold"></p>
+                        <p></p>
+                    </div>
+                    <div class="col-4">
+                        <table class="table border-0 table-hover">
+                            <tr>
+                                <td>Sous Total:</td>
+                                <td><span>{{ total }} DH</td>
+                            </tr>
+                            <tr>
+                                <td>Taxe:</td>
+                                <td>0 DH</td>
+                            </tr>
+                            <tfoot>
+                                <tr>
+                                    <td>Total:</td>
+                                    <td><span>{{ total }} DH</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <!-- Signature -->
+                        <div class="col-12">
+                            <img src="{% static 'image/signature1.jpg' %}" class="img-fluid" alt="">
+                            <p class="text-center m-0"> Administrateur GestEpice </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cart BG -->
+            <img src="cart.jpg" class="img-fluid cart-bg" alt="">
+
+            <footer>
+                <hr>
+                <p class="m-0 text-center">
+                    Pour d'autres produits consulter - <a href="{%url 'index' %}"> GestEpice.com </a>
+                </p>
+                <div class="social pt-3">
+                    <span class="pr-2">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>(+212) 0 674 521 757</span>
+                    </span>
+                    <span class="pr-2">
+                        <i class="fas fa-envelope"></i>
+                        <span>EpiceESTD@Gmail.Com</span>
+                    </span>
+                    <span class="pr-2">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>GestEpice</span>
+                    </span>
+                    <span class="pr-2">
+                        <i class="fab fa-youtube"></i>
+                        <span>ytGestEpice</span>
+                    </span>
+                    <span class="pr-2">
+                        <i class="fab fa-twitter"></i>
+                        <span>twGestEpice</span>
+                    </span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+<script>
+    window.print();
+</script>
+
+
+
+</body></html>

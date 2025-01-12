@@ -1,0 +1,154 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+{% include 'link.html' %}
+
+ <link rel="stylesheet" href="{% static 'css/stylep.css' %}">
+ 
+  </head>
+  <body class="common-home res layout-1">
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+
+
+    {% include 'header.html' %}
+
+      
+      <!-- Main Container  -->
+
+        <section>
+            <div class="container my-5 py-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-12 col-lg-10 col-xl-8">
+                        <div class="card" style="width:100%;">
+                            <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
+                                <div class="d-flex flex-start w-100">
+                                    <div class="form-outline w-100">
+                                        <!-- Formulaire de modification de profil -->
+                                        <form method="POST" id="editer-profil" enctype="multipart/form-data">
+                                            {% csrf_token %}  <!-- Ajout du token CSRF pour la sécurité -->
+                                            
+                                            <div class="col-md-14">
+                                                <div class="form-group">
+                                                    <span class="form-label">PSEUDO</span>
+                                                    <input class="form-control" type="text" required name="pseudo" value="{{ request.session.pseudo }}">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-14">
+                                                <div class="form-group">
+                                                    <span class="form-label">NOM</span>
+                                                    <input class="form-control" type="text" required name="nom" value="{{ request.session.nom }}">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-14">
+                                                <div class="form-group">
+                                                    <span class="form-label">PRENOM</span>
+                                                    <input class="form-control" type="text" required name="prenom" value="{{ request.session.prenom }}">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-14">
+                                                <div class="form-group">
+                                                    <span class="form-label">TELEPHONE</span>
+                                                    <input class="form-control" type="text" required name="telephone" value="{{ request.session.telephone }}">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-14">
+                                                <div class="form-group">
+                                                    <span class="form-label">EMAIL</span>
+                                                    <input class="form-control" type="text" required name="email" value="{{ request.session.email }}">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-14">
+                                                <div class="form-group">
+                                                    <span class="form-label">MOT DE PASSE</span>
+                                                    <input class="form-control" type="password" name="mot_de_passe">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-14">
+                                                <div class="form-group">
+                                                    <span class="form-label">PHOTO DE PROFIL</span>
+                                                    <input class="form-control" type="file" name="photo">
+                                                </div>
+                                            </div>
+
+                                            <!-- Messages d'erreur -->
+                                            <div class="alert alert-danger alert-inscription-danger" role="alert"></div>
+
+                                            <!-- Boutons d'action -->
+                                            <div class="d-flex justify-content-between mt-3">
+                                                <a href="{% url 'index' %}">
+                                                    <button type="button" class="btn btn-danger">
+                                                        <i class="fa-solid fa-arrow-left"></i>
+                                                        Annuler
+                                                    </button>
+                                                </a>
+                                                <input name="validation" type="submit" class="btn btn-success" value="Modifier" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+      <!-- //Main Container --> 
+      
+      
+      {% include 'modalProfil.html' %}
+
+
+      {% include 'footer.html' %}
+
+
+
+  </div>
+
+
+  {% include 'script.html' %}
+
+  <script> 
+$(".alert-inscription-danger").hide();
+//editer profil
+
+$("#editer-profil").on('submit', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: './../editer_profil/',
+            data: new FormData(this),
+            dataType: 'json',
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(response){
+                if(response.status == 'success'){
+                    window.location.href='./../';
+                }
+               else {
+                $(".alert-inscription-danger").show();
+                $(".alert-inscription-danger").html('LES PHOTOS DOIT ETRE EN PNG OU JPG !');
+                setTimeout(function(){$(".alert-inscription-danger").hide();},5000);
+               }
+            
+                }
+                
+            });
+    });
+</script>
+
+<script src="{% static 'js/panier.js' %}"></script>
+  
+
+</body>
+</html>
