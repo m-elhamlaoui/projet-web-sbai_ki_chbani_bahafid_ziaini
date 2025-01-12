@@ -11,10 +11,6 @@ from django.core.validators import EmailValidator
 import os
 
 
-# def connexion(request):
-#     return render(request, 'connexion.html')
-
-
 def connexion(request):
     if request.method == 'POST':
         pseudo = request.POST.get('pseudo')
@@ -33,13 +29,13 @@ def connexion(request):
                     request.session['nom'] = admin.nom_admin
                     request.session['prenom'] = admin.prenom_admin
                     request.session['pseudo'] = admin.pseudo_admin
-                    request.session['photo'] = admin.photo.url
+                    request.session['photo'] = admin.photo
 
                     # Mettre à jour le statut de l'admin
                     admin.status = 'CONNECTE'
                     admin.save()
 
-                    return JsonResponse({'status': 0, 'url': '/admin/dashboard/'})
+                    return JsonResponse({'status': 0, 'url': '/admins_epicerie/dashboard/'})
                 else:
                     return JsonResponse({'status': 'Votre mot de passe est incorrect !'})
             except Admin.DoesNotExist:
@@ -67,7 +63,7 @@ def connexion(request):
                     utilisateur.status = 'CONNECTE'
                     utilisateur.save()
 
-                    return JsonResponse({'status': 0, 'url': '/utilisateur/dashboard/'})
+                    return JsonResponse({'status': 0, 'url': '/users_epicerie/'})
                 else:
                     return JsonResponse({'status': 'Votre mot de passe est incorrect !'})
 
