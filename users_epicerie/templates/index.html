@@ -1,0 +1,509 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+{% include 'link.html' %}
+
+ <link rel="stylesheet" href="{% static 'css/stylep.css' %}">
+ 
+  </head>
+  <body class="common-home res layout-1">
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+
+
+    {% include 'header.html' %}
+
+      
+      <!-- Main Container  -->
+      <div class="main-container container">
+        <div id="content">
+          <div class="content-top-w">
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 main-left">
+              <div class="module col1 hidden-sm hidden-xs"></div>
+            </div>
+            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 main-right">
+              <div class="slider-container row">
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 col2">
+                  <div class="module sohomepage-slider">
+                    <div class="yt-content-slider" data-rtl="yes" data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-pagination="yes" data-lazyload="yes" data-loop="no" data-hoverpause="yes">
+                      <div class="yt-content-slide">
+                        <a href="#">
+                          <img src="{% static 'image/img3.jpg' %}" alt="slider1" class="img-responsive">
+                        </a>
+                      </div>
+                      <div class="yt-content-slide">
+                        <a href="#">
+                          <img src="{% static 'image/img2.jpg' %}" alt="slider2" class="img-responsive">
+                        </a>
+                      </div>
+                      <div class="yt-content-slide">
+                        <a href="#">
+                          <img src="{% static 'image/slider3.jpg' %}" alt="slider3" class="img-responsive">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="loadeding"></div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 col3">
+                  <div class="module product-simple extra-layout1">
+                    <h3 class="modtitle">
+                      <span>Plus Vendus</span>
+                    </h3>
+                    <div class="modcontent">
+                      <div id="so_extra_slider_1" class="so-extraslider">
+                        <div class="yt-content-slider extraslider-inner" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                          <div class="item"> {% for produit in produits_meilleures_ventes|slice:":9" %} <div class="product-layout item-inner style1">
+                              <div class="item-image">
+                                <div class="item-img-info">
+                                  <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                    <img src="{{ produit.image_produit.url }}" alt="{{ produit.nom_produit }}">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="item-info">
+                                <div class="item-title">
+                                  <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                    {{ produit.nom_produit }}
+                                  </a>
+                                </div>
+                                <div class="content_price price">
+                                  <p> {% if produit.prix_promotion != produit.prix %} <span class="price-new">{{ produit.prix_promotion }}</span>
+                                    <span class="price-old">{{ produit.prix }}</span> {% else %} <span class="price-new">{{ produit.prix }}</span> {% endif %}
+                                  </p>
+                                </div>
+                              </div>
+                            </div> {% endfor %} </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row content-main-w">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 main-left">
+              <div class="module product-simple extra-layout1">
+                <h3 class="modtitle">
+                  <span>Nos Derniers Produits</span>
+                </h3>
+                <div class="modcontent">
+                  <div id="so_extra_slider_1" class="so-extraslider">
+                    <div class="yt-content-slider extraslider-inner" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                      <div class="item"> {% for produit in derniers_produits|slice:":4" %} <div class="product-layout item-inner style1">
+                          <div class="item-image">
+                            <div class="item-img-info">
+                              <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                <img src="{{ produit.image_produit.url }}" alt="{{ produit.nom_produit }}">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="item-info">
+                            <div class="item-title">
+                              <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                {{ produit.nom_produit }}
+                              </a>
+                            </div>
+                            <div class="rating"> {% for i in "12345" %} {% if i|add:0 <= produit.totalNote|default:0 %} <span class="fa fa-stack">
+                                <i class="fa fa-star fa-stack-2x"></i>
+                              </span> {% else %} <span class="fa fa-stack">
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                              </span> {% endif %} {% endfor %} </div>
+                            <div class="content_price price">
+                              <p> {% if produit.prix_promotion != produit.prix %} <span class="price-new">{{ produit.prix_promotion }}</span>
+                                <span class="price-old">{{ produit.prix }}</span> {% else %} <span class="price-new">{{ produit.prix }}</span> {% endif %}
+                              </p>
+                            </div>
+                          </div>
+                        </div> {% endfor %} </div>
+                      <div class="item"> {% for produit in derniers_produits|slice:"5:9" %} <div class="product-layout item-inner style1">
+                          <div class="item-image">
+                            <div class="item-img-info">
+                              <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                <img src="{{ produit.image_produit.url }}" alt="{{ produit.nom_produit }}">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="item-info">
+                            <div class="item-title">
+                              <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                {{ produit.nom_produit }}
+                              </a>
+                            </div>
+                            <div class="rating"> {% for i in "12345" %} {% if i|add:0 <= produit.totalNote|default:0 %} <span class="fa fa-stack">
+                                <i class="fa fa-star fa-stack-2x"></i>
+                              </span> {% else %} <span class="fa fa-stack">
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                              </span> {% endif %} {% endfor %} </div>
+                            <div class="content_price price">
+                              <p> {% if produit.prix_promotion != produit.prix %} <span class="price-new">{{ produit.prix_promotion }}</span>
+                                <span class="price-old">{{ produit.prix }}</span> {% else %} <span class="price-new">{{ produit.prix }}</span> {% endif %}
+                              </p>
+                            </div>
+                          </div>
+                        </div> {% endfor %} </div>
+                      <div class="item"> {% for produit in derniers_produits|slice:"9:13" %} <div class="product-layout item-inner style1">
+                          <div class="item-image">
+                            <div class="item-img-info">
+                              <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                <img src="{{ produit.image_produit.url }}" alt="{{ produit.nom_produit }}">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="item-info">
+                            <div class="item-title">
+                              <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                {{ produit.nom_produit }}
+                              </a>
+                            </div>
+                            <div class="rating"> {% for i in "12345" %} {% if i|add:0 <= produit.totalNote|default:0 %} <span class="fa fa-stack">
+                                <i class="fa fa-star fa-stack-2x"></i>
+                              </span> {% else %} <span class="fa fa-stack">
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                              </span> {% endif %} {% endfor %} </div>
+                            <div class="content_price price">
+                              <p> {% if produit.prix_promotion != produit.prix %} <span class="price-new">{{ produit.prix_promotion }}</span>
+                                <span class="price-old">{{ produit.prix }}</span> {% else %} <span class="price-new">{{ produit.prix }}</span> {% endif %}
+                              </p>
+                            </div>
+                          </div>
+                        </div> {% endfor %} </div>
+                    </div>
+                  </div>
+                  <!--End extraslider-inner -->
+                </div>
+              </div>
+              <div class="module">
+                <div class="policy-w"></div>
+              </div>
+              <div class="module extra" id="avis">
+                <h3 class="modtitle">
+                  <span>Produits recommandés</span>
+                </h3>
+                <div class="modcontent">
+                  <div id="so_extra_slider_1" class="so-extraslider">
+                    <!-- Begin extraslider-inner -->
+                    <div class="products-list yt-content-slider extraslider-inner" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top"> {% for produitR in produits_recommandes %} {% for produit in produits %} {% if produitR.id_produit == produit.id_produit %} <div class="item">
+                        <div class="item-inner product-layout transition product-grid">
+                          <div class="product-item-container">
+                            <div class="left-block left-b">
+                              <div class="product-image-container second_img">
+                                <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                  <img src="{{ produit.image_produit.url }}" class="img-1 img-responsive" alt="image1" style="height:160px;width:160px;">
+                                  <img src="{{ produit.image_produit.url }}" class="img-2 img-responsive" alt="image2" style="height:160px;width:160px;">
+                                </a>
+                              </div>
+                              <!--quickview-->
+                              <div class="so-quickview">
+                                <a class="iframe-link btn-button quickview quickview_handler visible-lg" href="{% url 'quickview' produit.id_produit %}" title="Voir Plus" data-fancybox-type="iframe">
+                                  <i class="fa fa-eye"></i>
+                                  <span>Voir Plus</span>
+                                </a>
+                              </div>
+                              <!--end quickview-->
+                            </div>
+                            <div class="right-block">
+                              <div class="button-group so-quickview cartinfo--left"> {% if produit.qte_en_stock != 0 %} <button type="button" class="addToCart add_to_cart" title="Ajouter au Panier" name="add_to_cart" id="{{ produit.id_produit }}" value="Add to Cart"><i class="fa fa-shopping-basket"></i></button>
+                                <input type="hidden" name="hidden_photo" id="photo{{ produit.id_produit }}" value="{{ produit.image_produit.url }}" />
+                                <input type="hidden" name="hidden_name" id="name{{ produit.id_produit }}" value="{{ produit.nom_produit }}" />
+                                <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}" />
+                                <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1" /> {% if request.session.utilisateur_connecte %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+                                </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+                                </button> {% endif %} {% endif %}
+                              </div>
+                              <div class="caption hide-cont">
+                                <h4>
+                                  <a href="{% url 'product' produit.id_produit %}" title="{{ produit.nom_produit }}" target="_self">{{ produit.nom_produit }}</a>
+                                </h4>
+                              </div>
+                              <p class="price">
+                                <span class="price-new">{{ produit.prix }}</span>
+                              <div class="alert alert-success alert-recommandation-success{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                              <div class="alert alert-danger alert-recommandation-danger{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div> {% endif %} {% endfor %} {% endfor %} </div>
+                    <!--End extraslider-inner -->
+                  </div>
+                </div>
+              </div>
+              <div class="module testimonials" id="contact">
+                <h3 class="modtitle">
+                  <span>Avis sur GestEpice</span>
+                </h3>
+                <div class="slider-testimonials">
+                  <div class="yt-content-slider contentslider" data-rtl="no" data-loop="yes" data-autoplay="no" data-autoheight="no" data-autowidth="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-pagination="yes" data-lazyload="yes" data-hoverpause="yes"> {% for avisU in avis %} <div class="item">
+                      <div class="img">
+                        <img src="{{ avisU.id_utilisateur.photo.url }}" alt="Image" style="width:100px;height:100px;">
+                      </div>
+                      <div class="name">{{ avisU.id_utilisateur.nom }} {{ avisU.id_utilisateur.prenom }}</div>
+                      <p>“{{ avisU.avis_service }}”</p>
+                    </div> {% endfor %} </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 main-right">
+              <!-- Category Slider 3 -->
+              <div id="so_category_slider_1" class="so-category-slider container-slider module cateslider1">
+                <div class="modcontent" id="nosproduits">
+                  <div class="page-top">
+                    <div class="page-title-categoryslider">Produits les plus commentés</div>
+                    <div class="item-sub-cat"></div>
+                  </div>
+                  <div class="categoryslider-content">
+                    <div class="item-cat-image" style="min-height: 351px;">
+                      <a href="#" title="Produits les plus commentés" target="_self">
+                        <img class="categories-loadimage" alt="Fashion & Accessories" src="{% static 'image/imageIndex1.jpg' %}">
+                        <img class="categories-loadimage" alt="Fashion & Accessories" src="{% static 'image/imageIndex2.jpg' %}">
+                        <img class="categories-loadimage" alt="Fashion & Accessories" src="{% static 'image/imageIndex3.webp' %}">
+                      </a>
+                    </div>
+                    <div class="slider category-slider-inner products-list yt-content-slider" data-rtl="yes" data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column00="4" data-items_column0="4" data-items_column1="2" data-items_column2="1" data-items_column3="2" data-items_column4="1" data-arrows="yes" data-pagination="no" data-lazyload="yes" data-loop="yes" data-hoverpause="yes"> {% for produit in produits_commentes %} <div class="item">
+                        <div class="item-inner product-layout transition product-grid">
+                          <div class="product-item-container">
+                            <div class="left-block left-b">
+                              <div class="box-label"> {% if produit.prix_promotion != produit.prix %} {% widthratio produit.prix_promotion produit.prix 100 as reduction %} <span class="label-product label-sale">-{{ reduction }}%</span> {% endif %} {% if produit.is_new %} <span class="label-product label-new">New</span> {% endif %} </div>
+                              <div class="product-image-container second_img">
+                                <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                  <img src="{{ produit.image_produit.url }}" class="img-1 img-responsive" alt="{{ produit.nom_produit }}" style="height:160px;width:160px;">
+                                  <img src="{{ produit.image_produit.url }}" class="img-2 img-responsive" alt="{{ produit.nom_produit }}" style="height:160px;width:160px;">
+                                </a>
+                              </div>
+                              <!-- Quickview -->
+                              <div class="so-quickview">
+                                <a class="iframe-link btn-button quickview quickview_handler visible-lg" href="{% url 'quickview' produit.id_produit %}" title="Voir Plus" data-fancybox-type="iframe">
+                                  <i class="fa fa-eye"></i>
+                                  <span>Voir Plus</span>
+                                </a>
+                              </div>
+                              <!-- End Quickview -->
+                            </div>
+                            <div class="right-block">
+                              <div class="button-group so-quickview cartinfo--left"> {% if produit.qte_en_stock > 0 %} <button type="button" class="addToCart add_to_cart" title="Ajouter au Panier" name="add_to_cart" id="{{ produit.id_produit }}" value="Add to Cart"><i class="fa fa-shopping-basket"></i></button>
+                                <input type="hidden" name="hidden_photo" id="photo{{ produit.id_produit }}" value="{{ produit.image_produit.url }}">
+                                <input type="hidden" name="hidden_name" id="name{{ produit.id_produit }}" value="{{ produit.nom_produit }}">
+                                <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}">
+                                <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1"> {% endif %} {% if request.session.utilisateur_connecte %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+                                </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+                                </button> {% endif %}
+                              </div>
+                              <div class="caption hide-cont">
+                                <h4>
+                                  <a href="{% url 'product' produit.id_produit %}" title="{{ produit.nom_produit }}" target="_self">
+                                    {{ produit.nom_produit }}
+                                  </a>
+                                </h4>
+                              </div>
+                              <p class="price"> {% if produit.prix_promotion != produit.prix %} <span class="price-new">{{ produit.prix_promotion }}</span>
+                                <span class="price-old">{{ produit.prix }}</span> {% else %} <span class="price-new">{{ produit.prix }}</span> {% endif %}
+                              </p>
+                            </div>
+                            <div class="item-available">
+                              <div class="available"> {% widthratio produit.qte_en_stock produit.qte_en_stock|add:produit.seuil_min 100 as pourcentage %} <span class="color_width" data-title="{{ pourcentage }}%" data-toggle="tooltip" style="width: {{ pourcentage }}%"></span>
+                              </div>
+                              <p class="a2">Stock: <b>{{ produit.qte_en_stock }}</b>
+                              </p>
+                              <div class="alert alert-success alert-recommandation-success{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                              <div class="alert alert-danger alert-recommandation-danger{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> {% endfor %} </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Category Slider 3 -->
+              <!-- Deals -->
+              <div class="module deals-layout1">
+                <div class="head-title">
+                  <div class="modtitle">
+                    <span class="page-title-categoryslider">Nos Produits</span>
+                    <div class="cslider-item-timer">
+                      <div class="product_time_maxprice"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modcontent">
+                  <div id="so_deal_1" class="so-deal style1">
+                    <div class="extraslider-inner products-list yt-content-slider" data-rtl="yes" data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column00="6" data-items_column0="5" data-items_column1="3" data-items_column2="2" data-items_column3="2" data-items_column4="1" data-arrows="yes" data-pagination="no" data-lazyload="yes" data-loop="yes" data-hoverpause="yes"> {% for produit in produits %} <div class="item">
+                        <div class="item-inner product-layout transition product-grid">
+                          <div class="product-item-container">
+                            <div class="left-block left-b">
+                              <div class="box-label"> {% if produit.prix_promotion != produit.prix %} {% widthratio produit.prix_promotion produit.prix 100 as reduction %} <span class="label-product label-sale">-{{ reduction }}%</span> {% endif %} {% if produit.is_new %} <span class="label-product label-new">New</span> {% endif %} </div>
+                              <div class="product-image-container second_img">
+                                <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                  <img src="{{ produit.image_produit.url }}" class="img-1 img-responsive" alt="{{ produit.nom_produit }}" style="height:160px;width:160px;">
+                                  <img src="{{ produit.image_produit.url }}" class="img-2 img-responsive" alt="{{ produit.nom_produit }}" style="height:160px;width:160px;">
+                                </a>
+                              </div>
+                              <!-- Quickview -->
+                              <div class="so-quickview">
+                                <a class="iframe-link btn-button quickview quickview_handler visible-lg" href=" {% url 'quickview' produit.id_produit %}" title="clique pour voir" data-fancybox-type="iframe">
+                                  <i class="fa fa-eye"></i>
+                                  <span>clique pour voir</span>
+                                </a>
+                              </div>
+                              <!-- End Quickview -->
+                            </div>
+                            <div class="right-block">
+                              <div class="button-group so-quickview cartinfo--left"> {% if produit.qte_en_stock != 0 %} <button type="button" class="addToCart add_to_cart" title="Ajouter au Panier" name="add_to_cart" id="{{ produit.id_produit }}" value="Add to Cart"><i class="fa fa-shopping-basket"></i></button>
+                                <input type="hidden" name="hidden_photo" id="photo{{ produit.id_produit }}" value="{{ produit.image_produit.url }}">
+                                <input type="hidden" name="hidden_name" id="name{{ produit.id_produit }}" value="{{ produit.nom_produit }}">
+                                <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}">
+                                <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1"> {% endif %} {% if request.session.utilisateur_connecte %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+                                </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+                                </button> {% endif %}
+                              </div>
+                              <div class="caption hide-cont">
+                                <div class="ratings">
+                                  <div class="rating-box"> {% for i in "12345" %} {% if i|add:0 <= produit.totalNote|default:0 %} <span class="fa fa-stack">
+                                      <i class="fa fa-star fa-stack-2x"></i>
+                                    </span> {% else %} <span class="fa fa-stack">
+                                      <i class="fa fa-star-o fa-stack-2x"></i>
+                                    </span> {% endif %} {% endfor %} </div>
+                                  <span class="rating-num">( {{ produit.totalU }} )</span>
+                                </div>
+                                <h4>
+                                  <a href="{% url 'product' produit.id_produit %}" title="{{ produit.nom_produit }}" target="_self">
+                                    {{ produit.nom_produit }}
+                                  </a>
+                                </h4>
+                              </div>
+                              <p class="price"> {% if produit.prix_promotion != produit.prix %} <span class="price-new">{{ produit.prix_promotion }}</span>
+                                <span class="price-old">{{ produit.prix }}</span> {% else %} <span class="price-new">{{ produit.prix }}</span> {% endif %}
+                              </p>
+                            </div>
+                            <div class="item-available">
+                              <div class="available"> {% widthratio produit.qte_en_stock produit.qte_en_stock|add:produit.seuil_min 100 as pourcentage %} <span class="color_width" data-title="{{ pourcentage }}%" data-toggle="tooltip" style="width: {{ pourcentage }}%"></span>
+                              </div>
+                              <p class="a2">Stock: <b>{{ produit.qte_en_stock }}</b>
+                              </p>
+                              <div class="alert alert-success alert-recommandation-success{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                              <div class="alert alert-danger alert-recommandation-danger{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> {% endfor %} </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Deals -->
+              <!-- Category Slider 3 -->
+              <div id="so_category_slider_1" class="so-category-slider container-slider module cateslider1">
+                <div class="modcontent">
+                  <div class="page-top">
+                    <div class="page-title-categoryslider">PLATS FAITS PAR LES INPTISTES</div>
+                    <div class="item-sub-cat"></div>
+                  </div>
+                  <div class="categoryslider-content">
+                    <div class="item-cat-image" style="min-height: 351px;">
+                      <a href="#" title="PRODUITS INPTISTES" target="_self">
+                        <img class="categories-loadimage" src="{% static 'image/inpt.png' %}" alt="INPT">
+                        <img class="categories-loadimage" src="{% static 'image/inpt1.png' %}" alt="INPT">
+                      </a>
+                    </div>
+                    <div class="slider category-slider-inner products-list yt-content-slider" data-rtl="yes" data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column00="4" data-items_column0="4" data-items_column1="2" data-items_column2="1" data-items_column3="2" data-items_column4="1" data-arrows="yes" data-pagination="no" data-lazyload="yes" data-loop="yes" data-hoverpause="yes"> {% for produit in produits %} {% if produit.admin == "NON" %} <div class="item">
+                        <div class="item-inner product-layout transition product-grid">
+                          <div class="product-item-container">
+                            <div class="left-block left-b"> {% if produit.prix_promotion != produit.prix %} {% widthratio produit.prix_promotion produit.prix 100 as reduction %} <div class="box-label">
+                                <span class="label-product label-sale">-{{ reduction }}%</span>
+                              </div> {% endif %} <div class="product-image-container second_img">
+                                <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                  <img src="{{ produit.image_produit.url }}" class="img-1 img-responsive" alt="{{ produit.nom_produit }}" style="height:160px;width:160px;">
+                                  <img src="{{ produit.image_produit.url }}" class="img-2 img-responsive" alt="{{ produit.nom_produit }}" style="height:160px;width:160px;">
+                                </a>
+                              </div>
+                              <!-- Quickview -->
+                              <div class="so-quickview">
+                                <a class="iframe-link btn-button quickview quickview_handler visible-lg" href="{% url 'quickview' produit.id_produit %}" title="clique pour voir" data-fancybox-type="iframe">
+                                  <i class="fa fa-eye"></i>
+                                  <span>clique pour voir</span>
+                                </a>
+                              </div>
+                              <!-- End Quickview -->
+                            </div>
+                            <div class="right-block">
+                              <div class="button-group so-quickview cartinfo--left"> {% if produit.qte_en_stock != 0 %} <button type="button" class="addToCart add_to_cart" title="Ajouter au Panier" name="add_to_cart" id="{{ produit.id_produit }}" value="Add to Cart"><i class="fa fa-shopping-basket"></i></button>
+                                <input type="hidden" name="hidden_photo" id="photo{{ produit.id_produit }}" value="{{ produit.image_produit.url }}">
+                                <input type="hidden" name="hidden_name" id="name{{ produit.id_produit }}" value="{{ produit.nom_produit }}">
+                                <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}">
+                                <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1"> {% endif %} {% if request.session.utilisateur_connecte %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+                                </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+                                </button> {% endif %}
+                              </div>
+                              <div class="caption hide-cont">
+                                <div class="ratings">
+                                  <div class="rating-box"> {% for i in "12345" %} {% if i|add:0 <= produit.totalNote|default:0 %} <span class="fa fa-stack">
+                                      <i class="fa fa-star fa-stack-2x"></i>
+                                    </span> {% else %} <span class="fa fa-stack">
+                                      <i class="fa fa-star-o fa-stack-2x"></i>
+                                    </span> {% endif %} {% endfor %} </div>
+                                  <span class="rating-num">( {{ produit.totalU }} )</span>
+                                </div>
+                                <h4>
+                                  <a href="{% url 'product' produit.id_produit %}" title="{{ produit.nom_produit }}" target="_self">
+                                    {{ produit.nom_produit }}
+                                  </a>
+                                </h4>
+                              </div>
+                              <p class="price"> {% if produit.prix_promotion != produit.prix %} <span class="price-new">{{ produit.prix_promotion }}</span>
+                                <span class="price-old">{{ produit.prix }}</span> {% else %} <span class="price-new">{{ produit.prix }}</span> {% endif %}
+                              </p>
+                            </div>
+                            <div class="item-available">
+                              <div class="available"> {% widthratio produit.qte_en_stock produit.qte_en_stock|add:produit.seuil_min 100 as pourcentage %} <span class="color_width" data-title="{{ pourcentage }}%" data-toggle="tooltip" style="width: {{ pourcentage }}%"></span>
+                              </div>
+                              <p class="a2">Stock: <b>{{ produit.qte_en_stock }}</b>
+                              </p>
+                              <div class="alert alert-success alert-recommandation-success{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                              <div class="alert alert-danger alert-recommandation-danger{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> {% endif %} {% endfor %} </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Category Slider 3 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //Main Container --> 
+      
+      
+      {% include 'modalProfil.html' %}
+
+
+      {% include 'footer.html' %}
+
+
+
+  </div>
+
+
+{% include 'scriptIndex.html' %}
+  
+
+  </body>
+</html>

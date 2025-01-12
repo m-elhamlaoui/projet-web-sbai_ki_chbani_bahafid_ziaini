@@ -1,0 +1,134 @@
+{% include 'script.html' %}
+
+  <script>
+
+  $(document).ready(function(){
+
+    $(document).on('click', '.recommander', function(){
+    var product_id = $(this).attr("id");
+    {
+        $.ajax({
+            url:"./../../recommander_produit/",
+            method:"POST",
+            data:{product_id:product_id,
+                csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val()  // Inclure le token CSRF
+            },
+            success:function(response)
+            {
+                if (response.status === 'success') {
+                    $(".alert-recommandation-success" + product_id).show();
+                    $(".alert-recommandation-success" + product_id).html('PRODUIT RECOMMANDE !');
+                    setTimeout(function() {
+                        $(".alert-recommandation-success" + product_id).hide();
+                    }, 5000);
+                } else if (response.status === 'error') {
+                    if (response.message == 'Produit deja recommande !') {
+                        $(".alert-recommandation-danger" + product_id).show();
+                        $(".alert-recommandation-danger" + product_id).html('PRODUIT DEJA RECOMMANDE !');
+                        setTimeout(function() {
+                            $(".alert-recommandation-danger" + product_id).hide();
+                        }, 5000);
+                    } else {
+                        window.location.href = "./../../../gestion_epicerie/connexion/";  // Rediriger vers la page de connexion
+                    }
+                }
+            },
+           
+        })
+    }
+
+});
+});
+
+  </script>
+
+
+  <script>
+
+
+$(document).ready(function(){
+
+    load_cart_data();
+
+
+function load_cart_data()
+	{
+		$.ajax({
+			url:"./../../fetch_cart/",
+			method:"POST",
+			dataType:"json",
+			success:function(data)
+			{
+				$('#cart_details').html(data.cart_details);
+				$('.total_price').text(data.total_price);
+				$('.badge').text(data.total_item);
+			}
+		});
+	}
+
+$(document).on('click', '.add_to_cart', function(){
+		var product_id = $(this).attr("id");
+		var product_name = $('#name'+product_id+'').val();
+		var product_price = $('#price'+product_id+'').val();
+		var product_photo = $('#photo'+product_id).val();
+        var product_quantity = $('#quantity'+product_id).val();
+		var action = "add";
+
+			$.ajax({
+				url:"./../../gestion_panier/",
+				method:"POST",
+				data:{product_id:product_id, product_name:product_name, product_price:product_price, product_quantity:product_quantity,product_photo:product_photo, action:action},
+				success:function(data)
+				{
+					load_cart_data();
+				}
+			});
+
+	});
+
+});
+
+function load_cart_data()
+	{
+		$.ajax({
+			url:"./../../fetch_cart/",
+			method:"POST",
+			dataType:"json",
+			success:function(data)
+			{
+				$('#cart_details').html(data.cart_details);
+				$('.total_price').text(data.total_price);
+				$('.badge').text(data.total_item);
+			}
+		});
+	}
+
+
+    $(document).on('click', '.ajouter', function(){
+		var product_id = $(this).attr("id");
+		var action = 'ajouter';
+		{
+			$.ajax({
+				url:"./../../gestion_panier/",
+				method:"POST",
+				data:{product_id:product_id, action:action},
+				success:function()
+				{
+					load_cart_data();
+				}
+			})
+		}
+
+	});
+
+</script>
+
+  	<script type="text/javascript"><!--
+	// Check if Cookie exists
+		if($.cookie('display')){
+			view = $.cookie('display');
+		}else{
+			view = 'grid';
+		}
+		if(view) display(view);
+	//--></script> 
