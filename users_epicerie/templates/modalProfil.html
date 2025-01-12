@@ -1,0 +1,75 @@
+<!-- modalProfil.html -->
+<div class="modal" id="profil">
+    <div class="modal-dialog" style="width:100%;">
+        <div class="modal-content">
+            <div class="modal-header btn-info" style="background:linear-gradient(to left, #fe8c00, #f83600);">
+                <h5 class="modal-title" style="color:white; font-weight:bold;">MON PROFIL</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card user-card-full" style="width:100%;">
+                    <div class="row m-l-0 m-r-0">
+                        <!-- Section photo et pseudo -->
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25">
+                                    <img src="{{ request.session.photo }}" class="img-radius" alt="User-Profile-Image">
+                                </div>
+                                <p class="m-b-10 f-w-600">PSEUDO</p>
+                                <h6 class="f-w-600">{{ request.session.pseudo }}</h6>
+                                <i class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                            </div>
+                        </div>
+                        <!-- Section informations utilisateur -->
+                        <div class="col-sm-8" style="background:white;">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">INFORMATION</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">NOM</p>
+                                        <h6 class="text-muted f-w-400">{{ request.session.nom }}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">PRENOM</p>
+                                        <h6 class="text-muted f-w-400">{{ request.session.prenom }}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">TELEPHONE</p>
+                                        <h6 class="text-muted f-w-400">{{ request.session.telephone }}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">EMAIL</p>
+                                        <h6 class="text-muted f-w-400">{{ request.session.email }}</h6>
+                                    </div>
+                                </div>
+                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <a href="{% url 'editer_profil' %}">
+                                            <p class="m-b-10 f-w-600" style="color:green;font-weight:bold;">EDITER PROFIL</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="url 'mes_commandes' %}">
+                                            <p class="m-b-10 f-w-600" style="color:blue;font-weight:bold;">MES COMMANDES</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="{% url 'ajouter_avis_service' %}">
+                                            <p class="m-b-10 f-w-600" style="color:orange;font-weight:bold;">AVIS SERVICE</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="{% url 'deconnexion' %}">
+                                            <p class="m-b-10 f-w-600" style="color:red;font-weight:bold;">DECONNEXION</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

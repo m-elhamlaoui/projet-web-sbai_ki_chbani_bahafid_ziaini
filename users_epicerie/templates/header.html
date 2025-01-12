@@ -1,0 +1,197 @@
+       {% load static %}
+       <!-- Header Container  -->
+      <header id="header" class="typeheader-1">
+        <!-- Header Top -->
+        <div class="header-top hidden-compact">
+          <div class="container">
+            <div class="row">
+              <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
+                <div class="hidden-md hidden-sm hidden-xs welcome-msg"> Vous trouverez ici tous les produits avec les meilleures qualités possibles <span>Bienvenue sur GestEpice</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //Header Top -->
+        <!-- Header center -->
+        <div class="header-middle">
+          <div class="container">
+            <div class="row">
+              <!-- Logo -->
+              <div class="navbar-logo col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                <div class="logo">
+                  <a href="{% url 'index' %}">
+                    <img src="{% static 'image/logoF.PNG' %}" title="logo GestEpice" alt="Your Store" style="height:50px;" />
+                  </a>
+                </div>
+              </div>
+              <!-- //end Logo -->
+              <!-- Search -->
+              <div class="col-lg-7 col-md-6 col-sm-5">
+                <div class="search-header-w">
+                  <div class="icon-search hidden-lg hidden-md hidden-sm">
+                    <i class="fa fa-search"></i>
+                  </div>
+                  <div id="sosearchpro" class="sosearchpro-wrapper so-search">
+                    <form method="GET" action="{% url 'recherche' %}">{% csrf_token %} {{ form.as_p }}
+                      <div id="search0" class="search input-group form-group">
+                        <div class="select_category filter_type icon-select hidden-sm hidden-xs">
+                          <select class="no-border" name="category_id">
+                            <option value="">Toutes les catégories</option> {% for cate in categories %} <option value="{{ cate.id_categorie }}">{{ cate.nom_categorie }}</option> {% endfor %}
+                          </select>
+                        </div>
+                        <input class="autosearch-input form-control" type="text" size="50" autocomplete="off" placeholder="Rechercher ici..." name="search">
+                        <button type="submit" class="button-search btn btn-primary">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- //end Search -->
+              <div class="middle-right col-lg-3 col-md-3 col-sm-3">
+                <!-- Cart -->
+                <div class="shopping_cart">
+                  <div id="cart" class="btn-shopping-cart">
+                    <a href="url 'panier' %}" class="btn-group top_cart dropdown-toggle">
+                      <div class="shopcart">
+                        <span class="icon-c">
+                          <i class="fa fa-shopping-bag"></i>
+                        </span>
+                        <div class="shopcart-inner"> {% if request.session.utilisateur_connecte %} <p class="text-shopping-cart">Mon Solde</p> {% endif %} <span class="total-shopping-cart cart-total-full">
+                            <span class="items_cart badge"></span>
+                            <span class="items_cart2"> item(s)</span> {% if request.session.utilisateur_connecte %} <span class="items_carts">( <i class="fa-solid fa-wallet"></i> {{ request.session.solde }} DH) </span> {% endif %} </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- //Cart -->
+                <ul class="wishlist-comp hidden-md hidden-sm hidden-xs"> {% if request.session.utilisateur_connecte %} <li class="compare hidden-xs">
+                    <a href="{% url 'deconnexion' %}" class="top-link-compare" title="Déconnexion">
+                      <i class="fa-solid fa-power-off"></i>
+                    </a>
+                  </li>
+                  <li class="compare hidden-xs">
+                    <a class="top-link-compare" title="Profil" data-bs-toggle="modal" data-bs-target="#profil">
+                      <i class="fa-solid fa-user"></i>
+                    </a>
+                  </li> {% else %} <li class="compare hidden-xs">
+                    <a href="{% url 'connexion' %}" class="top-link-compare" title="Se connecter">
+                      <i class="fa-solid fa-user"></i>
+                    </a>
+                  </li> {% endif %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //Header center -->
+        <!-- Header Bottom -->
+        <div class="header-bottom hidden-compact">
+          <div class="container">
+            <div class="row">
+              <div class="bottom1 menu-vertical col-lg-2 col-md-3 col-sm-3">
+                <div class="responsive so-megamenu megamenu-style-dev">
+                  <div class="so-vertical-menu">
+                    <nav class="navbar-default">
+                      <div class="container-megamenu vertical">
+                        <div id="menuHeading">
+                          <div class="megamenuToogle-wrapper">
+                            <div class="megamenuToogle-pattern">
+                              <div class="container">
+                                <div>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                </div> Les Catégories
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="navbar-header">
+                          <button type="button" id="show-verticalmenu" data-toggle="collapse" class="navbar-toggle">
+                            <i class="fa fa-bars"></i>
+                            <span>Les Catégories</span>
+                          </button>
+                        </div>
+                        <div class="vertical-wrapper">
+                          <span id="remove-verticalmenu" class="fa fa-times"></span>
+                          <div class="megamenu-pattern">
+                            <div class="container-mega">
+                              <ul class="megamenu"> {% for categorie in categories %} <li class="item-vertical with-sub-menu hover">
+                                  <p class="close-menu"></p>
+                                  <a href="{% url 'categorie' categorie.id_categorie %}" class="clearfix">
+                                    <span>{{ categorie.nom_categorie }}</span>
+                                    <b class="fa-angle-right"></b>
+                                  </a>
+                                </li> {% endfor %} </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <!-- Main menu -->
+              <div class="main-menu-w col-lg-10 col-md-9">
+                <div class="responsive so-megamenu megamenu-style-dev">
+                  <nav class="navbar-default">
+                    <div class="container-megamenu horizontal open">
+                      <div class="navbar-header">
+                        <button type="button" id="show-megamenu" data-toggle="collapse" class="navbar-toggle">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                      </div>
+                      <div class="megamenu-wrapper">
+                        <span id="remove-megamenu" class="fa fa-times"></span>
+                        <div class="megamenu-pattern">
+                          <div class="container-mega">
+                            <ul class="megamenu" data-transition="slide" data-animationtime="250"> {% if request.session.utilisateur_connecte %} <li class="with-sub-menu hover">
+                                <a data-bs-toggle="modal" data-bs-target="#profil">Profil</a>
+                              </li> {% else %} <li class="with-sub-menu hover">
+                                <a href="{% url 'connexion' %}">Login</a>
+                              </li> {% endif %} <li class="with-sub-menu hover">
+                                <p class="close-menu"></p>
+                                <a href="#nosproduits" class="clearfix">
+                                  <strong>Nos Produits</strong>
+                                  <img class="label-hot" src="{% static 'image/new-icon.png' %}" alt="icon items">
+                                </a>
+                              </li>
+                              <li class="with-sub-menu hover">
+                                <p class="close-menu"></p>
+                                <a href="#avis" class="clearfix">
+                                  <strong>Avis</strong>
+                                </a>
+                              </li>
+                              <li class="with-sub-menu hover">
+                                <p class="close-menu"></p>
+                                <a href=" url 'chat' %}" class="clearfix">
+                                  <strong>CONTACTER ADMIN</strong>
+                                </a>
+                              </li>
+                              <li class="">
+                                <p class="close-menu"></p>
+                                <a href="#contact" class="clearfix">
+                                  <strong>Contact</strong>
+                                  <span class="label"></span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <!-- //end Main menu -->
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- //Header Container  -->

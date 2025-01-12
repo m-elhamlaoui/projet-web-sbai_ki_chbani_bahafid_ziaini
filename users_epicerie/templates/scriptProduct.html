@@ -1,0 +1,105 @@
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+ 
+ <script> 
+$(".alert-inscription-danger").hide();
+$(".alert-inscription-success").hide();
+$(".alert-warning").hide();
+</script>
+
+<script>
+ 
+ 
+    $(function () {
+        $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+            var rating = data.rating;
+            $(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
+            $(this).parent().find('.result').text('Note :'+ rating);
+            $(this).parent().find('input[name=rating]').val(rating); //add rating value to input field
+        });
+    });
+ 
+</script>
+
+<script>
+
+$(document).ready(function(e){
+
+    //Ajout avis produit
+
+    $("#formAvisProduit").on('submit', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: './../../ajouter_avis_produit/',
+            data: new FormData(this),
+            dataType: 'json',
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(response){
+                if(response.status === 'success') {
+                    $(".alert-inscription-success").show();
+                    $(".alert-inscription-success").html(response.message);
+                    setTimeout(function(){$(".alert-inscription-success").hide();},5000);
+                } else if(response.status === 'error') {
+                    $(".alert-inscription-danger").show();
+                    $(".alert-inscription-danger").html(response.message);
+                    setTimeout(function(){$(".alert-inscription-danger").hide();},5000);
+                }
+            },
+            error: function(xhr, status, error) {
+                $(".alert-inscription-danger").show();
+                $(".alert-inscription-danger").html("Une erreur s'est produite. Veuillez réessayer.");
+                setTimeout(function(){$(".alert-inscription-danger").hide();},5000);
+            }
+            
+                
+                
+            });
+    });
+
+})
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+
+    $(document).on('click', '.recommander', function(){
+    var product_id = $(this).attr("id");
+    {
+        $.ajax({
+            url:"./../../recommander_produit/",
+            method:"POST",
+            data:{product_id:product_id,
+                csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val()  // Inclure le token CSRF
+            },
+            success:function(response)
+            {
+                if (response.status === 'success') {
+                    $(".alert-recommandation-success" + product_id).show();
+                    $(".alert-recommandation-success" + product_id).html('PRODUIT RECOMMANDE !');
+                    setTimeout(function() {
+                        $(".alert-recommandation-success" + product_id).hide();
+                    }, 5000);
+                } else if (response.status === 'error') {
+                    if (response.message == 'Produit deja recommande !') {
+                        $(".alert-recommandation-danger" + product_id).show();
+                        $(".alert-recommandation-danger" + product_id).html('PRODUIT DEJA RECOMMANDE !');
+                        setTimeout(function() {
+                            $(".alert-recommandation-danger" + product_id).hide();
+                        }, 5000);
+                    } else {
+                        window.location.href = "./../../../gestion_epicerie/connexion/";  // Rediriger vers la page de connexion
+                    }
+                }
+            },
+           
+        })
+    }
+
+});
+});
+
+</script>

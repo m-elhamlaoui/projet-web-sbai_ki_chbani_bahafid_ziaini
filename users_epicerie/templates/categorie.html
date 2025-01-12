@@ -1,0 +1,294 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+{% include 'link.html' %}
+
+ <link rel="stylesheet" href="{% static 'css/stylep.css' %}">
+ 
+  </head>
+  <body class="common-home res layout-1">
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+
+
+    {% include 'header.html' %}
+
+      
+      <!-- Main Container  -->
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="{% url 'index' %}"><i class="fa fa-home"></i></a></li>
+        {% for categorie in categories %}
+            {% if categorie.id_categorie == id_ca %}
+                <li><a href="#">{{ categorie.nom_categorie }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <div class="row">
+        <!-- Left Part Start -->
+        <aside class="col-sm-4 col-md-3 content-aside" id="column-left">
+            <div class="module category-style">
+                <h3 class="modtitle">LES CATEGORIES</h3>
+                <div class="modcontent">
+                    <div class="box-category">
+                        <ul id="cat_accordion" class="list-group">
+                            {% for categorie in categories %}
+                                <li class="hadchild">
+                                    <a href="{% url 'categorie' categorie.id_categorie %}" class="cutom-parent">{{ categorie.nom_categorie }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module product-simple extra-layout1">
+                <h3 class="modtitle">
+                    <span>Nos Derniers Produits</span>
+                </h3>
+                <div class="modcontent">
+                    <div id="so_extra_slider_1" class="so-extraslider">
+                        <div class="yt-content-slider extraslider-inner" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                            
+                                <div class="item">
+                                {% for dernier_produit in derniers_produits %}
+                                    <div class="product-layout item-inner style1">
+                                        <div class="item-image">
+                                            <div class="item-img-info">
+                                                <a href="{% url 'product' dernier_produit.id_produit %}" target="_self" title="{{ dernier_produit.nom_produit }}">
+                                                    <img src="{{ dernier_produit.image_produit.url }}" alt="{{ dernier_produit.nom_produit }}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-title">
+                                                <a href="{% url 'product' dernier_produit.id_produit %}" target="_self" title="{{ dernier_produit.nom_produit }}">
+                                                    {{ dernier_produit.nom_produit }}
+                                                </a>
+                                            </div>
+                                            <div class="rating">
+                                                {% for i in "12345" %}
+                                                    {% if i|add:0 <= dernier_produit.totalNote|default:0 %}
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                    {% else %}
+                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                            <div class="content_price price">
+                                                {% if dernier_produit.prix_promotion != dernier_produit.prix %}
+                                                    <span class="price-new product-price">{{ dernier_produit.prix_promotion }}</span>
+                                                    <span class="price-old">{{ dernier_produit.prix }}</span>
+                                                {% else %}
+                                                    <span class="price-new product-price">{{ dernier_produit.prix }}</span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Left Part End -->
+
+        <!-- Middle Part Start -->
+        <div id="content" class="col-md-9 col-sm-8">
+            <div class="products-category">
+                <h3 class="title-category">Produits</h3>
+                <div class="category-desc">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="banners">
+                                <div>
+                                    <a href="#"><img src="{% static 'image/img2.jpg' %}" style="height:370px;width:900px;" alt="img cate"><br></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="product-filter product-filter-top filters-panel">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-3 col-xs-12 view-mode">
+                            <div class="list-view">
+                                <button class="btn btn-default grid active" data-view="grid" data-toggle="tooltip" data-original-title="Grid"><i class="fa fa-th"></i></button>
+                                <button class="btn btn-default list" data-view="list" data-toggle="tooltip" data-original-title="List"><i class="fa fa-th-list"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //end Filters -->
+
+                <!-- Products List -->
+                <div class="products-list row nopadding-xs so-filter-gird">
+                    {% for produit in produits %}
+                        {% if produit.id_categorie_id == id_ca %}
+                            <div class="product-layout col-lg-15 col-md-4 col-sm-6 col-xs-12">
+                                <div class="product-item-container">
+                                    <div class="left-block left-b">
+                                        <div class="box-label"> {% if produit.prix_promotion != produit.prix %} {% widthratio produit.prix_promotion produit.prix 100 as reduction %} <span class="label-product label-sale">-{{ reduction }}%</span> {% endif %} {% if produit.is_new %} <span class="label-product label-new">New</span> {% endif %} </div>
+                                        <div class="product-image-container second_img">
+                                            <a href="{% url 'product' produit.id_produit %}" target="_self" title="{{ produit.nom_produit }}">
+                                                <img src="{{ produit.image_produit.url }}" class="img-1 img-responsive" alt="image1" style="height:160px;width:160px;">
+                                                <img src="{{ produit.image_produit.url }}" class="img-2 img-responsive" alt="image2" style="height:160px;width:160px;">
+                                            </a>
+                                        </div>
+                                        <div class="so-quickview">
+                                            <a class="iframe-link btn-button quickview quickview_handler visible-lg" href="{% url 'quickview' produit.id_produit %}" title="Quick view" data-fancybox-type="iframe"><i class="fa fa-eye"></i><span>voir</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="right-block">
+                                        <div class="button-group so-quickview cartinfo--left">
+                                            {% if produit.qte_en_stock != 0 %}
+                                                <button type="button" class="add_to_cart addToCart" title="Ajouter au Panier" name="add_to_cart" id="{{ produit.id_produit }}" value="Add to Cart">
+                                                    <span>Ajouter Panier</span>
+                                                </button>
+                                                <input type="hidden" name="hidden_photo" id="photo{{ produit.id_produit }}" value="{{ produit.image_produit.url }}" />
+                                                <input type="hidden" name="hidden_name" id="name{{ produit.id_produit }}" value="{{ produit.nom_produit }}" />
+                                                <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}" />
+                                                <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1" />
+                                            {% endif %}
+                                            {% if request.session.utilisateur_connecte %}
+                                                <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}"><i class="fa fa-heart-o"></i><span>Recommander</span></button>
+                                            {% else %}
+                                                <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2"><i class="fa fa-heart-o"></i><span>Recommander</span></button>
+                                            {% endif %}
+                                        </div>
+                                        <div class="caption hide-cont">
+                                            <div class="ratings">
+                                            <div class="rating">
+                                                {% for i in "12345" %}
+                                                    {% if i|add:0 <= produit.totalNote|default:0 %}
+                                                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                                                    {% else %}
+                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                                <span class="rating-num">( {{ produit.totalU }} )</span>
+                                            </div>
+                                            <h4><a href="{% url 'product' produit.id_produit %}" title="{{ produit.nom_produit }}" target="_self">{{ produit.nom_produit }}</a></h4>
+                                        </div>
+                                        <p class="price">
+                                            {% if produit.prix_promotion != produit.prix %}
+                                                <span class="price-new">{{ produit.prix_promotion }}</span>
+                                                <span class="price-old">{{ produit.prix }}</span>
+                                            {% else %}
+                                                <span class="price-new">{{ produit.prix }}</span>
+                                            {% endif %}
+                                        </p>
+                                        <p class="price">
+                                            <div class="alert alert-success alert-recommandation-success{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                                            <div class="alert alert-danger alert-recommandation-danger{{ produit.id_produit }}" role="alert" style="display:none;"></div>
+                                        </p>
+                                        <div class="description item-desc">
+                                            <p>{{ produit.description }}</p>
+                                        </div>
+                                        <div class="list-block">
+                                            {% if produit.qte_en_stock != 0 %}
+                                                <button type="button" class="addToCart add_to_cart btn-button" title="Ajouter au Panier" name="add_to_cart" id="{{ produit.id_produit }}" value="Add to Cart">
+                                                    <i class="fa fa-shopping-basket"></i>
+                                                </button>
+                                                <input type="hidden" name="hidden_photo" id="photo{{ produit.id_produit }}" value="{{ produit.image_produit.url }}" />
+                                                <input type="hidden" name="hidden_name" id="name{{ produit.id_produit }}" value="{{ produit.nom_produit }}" />
+                                                <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}" />
+                                                <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1" />
+                                            {% endif %}
+                                            {% if request.session.utilisateur_connecte %}
+                                                <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}"><i class="fa fa-heart-o"></i></button>
+                                            {% else %}
+                                                <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2"><i class="fa fa-heart-o"></i></button>
+                                            {% endif %}
+                                            <a class="iframe-link btn-button quickview quickview_handler visible-lg" href="{% url 'quickview' produit.id_produit %}" title="Voir Plus" data-fancybox-type="iframe"><i class="fa fa-eye"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <!-- //end Products List -->
+            </div>
+        </div>
+        <!-- Middle Part End -->
+    </div>
+</div>
+
+
+      <!-- //Main Container --> 
+      
+      
+      {% include 'modalProfil.html' %}
+
+
+      {% include 'footer.html' %}
+
+
+
+  </div>
+
+
+  {% include 'script.html' %}
+
+  <script>
+
+  $(document).ready(function(){
+
+    $(document).on('click', '.recommander', function(){
+    var product_id = $(this).attr("id");
+    {
+        $.ajax({
+            url:"./../../recommander_produit/",
+            method:"POST",
+            data:{product_id:product_id,
+                csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val()  // Inclure le token CSRF
+            },
+            success:function(response)
+            {
+                if (response.status === 'success') {
+                    $(".alert-recommandation-success" + product_id).show();
+                    $(".alert-recommandation-success" + product_id).html('PRODUIT RECOMMANDE !');
+                    setTimeout(function() {
+                        $(".alert-recommandation-success" + product_id).hide();
+                    }, 5000);
+                } else if (response.status === 'error') {
+                    if (response.message == 'Produit deja recommande !') {
+                        $(".alert-recommandation-danger" + product_id).show();
+                        $(".alert-recommandation-danger" + product_id).html('PRODUIT DEJA RECOMMANDE !');
+                        setTimeout(function() {
+                            $(".alert-recommandation-danger" + product_id).hide();
+                        }, 5000);
+                    } else {
+                        window.location.href = "./../../../gestion_epicerie/connexion/";  // Rediriger vers la page de connexion
+                    }
+                }
+            },
+           
+        })
+    }
+
+});
+});
+
+  </script>
+
+  	<script type="text/javascript"><!--
+	// Check if Cookie exists
+		if($.cookie('display')){
+			view = $.cookie('display');
+		}else{
+			view = 'grid';
+		}
+		if(view) display(view);
+	//--></script> 
+  
+
+  </body>
+</html>
