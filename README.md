@@ -51,6 +51,16 @@ Le diagramme de classes ci-dessous représente la structure conceptuelle du proj
 
 ---
 
+## Diagramme de Cas d'Utilisation
+
+### Description
+Le diagramme de cas d'utilisation ci-dessous représente les principales interactions entre les acteurs du système (Client, Admin, Supplier) et les fonctionnalités qu'ils peuvent effectuer. Les cas d'utilisation communs à plusieurs acteurs (comme "S'inscrire et se connecter" et "Contacter via le chat") sont également mis en évidence.
+
+### Diagramme
+![Diagramme de cas d'utilisation](https://www.plantuml.com/plantuml/svg/VLHBRjim4Dtx58Diicc0-1zlYXXU55qKAEBc0AmqZgUbI9KpD7ebdKCNAodRf9YaMHXu7hpFu7deHnRbn3Twel4W81OSlHm5Qd9O2LapKPLO1pjDQ0GKm-uosTODcJZONWPxtxQ1vU9iFvdSmZCZL8gHuP0S9funpk1vDut4cs-sfaDKwS0Z4vYDYhaCDKBhx87qpKWq6qHFM1tHnKzWSQJLdYG0vKAYzDsBTOHWFJHMxYhTTsEF-U2n_MMzl3PGFdWOGZVcBmR-TyKSwDuWLBPfbAbnJ5eMfjw0EX43-uYl_c1z_1PiJbGLwjMWtbd3NaUzLg291UDsAOx7YlMW-DgqZfhBMWTLYNV1j-p--bkDn0-3-4lVkPWrBW0b5rW6RbwlEDuCMiNSTwLYUl-EX4K9iT0VZmmdKc48jUBZJwjSNQYdRvPKX0qQuQ6LlXDVap9IPkO3KUvb409RNL-Qr8Il1VEpeEzQQsg7eFpV2o_j5xpaJQlvuCTkY_4PV8BcUjtM0mUwewOykNANvSSTM--0_wTTbNK1Ywr-0meuhF1awHohD3h1Khc-LfPfnahOkyelyRsJdvxFw4VVwRwxzkqDEDMsribWT48Jus9vks1X3VXhXsEdT5oYAa5N5fzvi_D5xM_9SEN88Q10zBF6O1GEGK-epuiVgIt-UtPmT_SvnYKqIsYUq2AXPKAhXDRPPPDjxj_cvdUtlR0U4jeaDBtFS9hXBCDvXa7sSM0-oVrLiyXmcU4gmtM63nbk4WnHZsXgt-X_)
+
+---
+
 ## Description Non-Fonctionnelle
 
 ### Exigences Techniques
