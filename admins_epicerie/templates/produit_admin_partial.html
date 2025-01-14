@@ -1,0 +1,44 @@
+<ul class="details">
+    <li class="topic">PRODUIT</li>
+    {% for produit in produits %}
+        <li>
+            <a><img src="./../../{{ produit.image_produit }}" alt=""></a>
+            <a>{{ produit.nom_produit }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<ul class="Customer">
+    <li class="topic">PRIX</li>
+    {% for produit in produits %}
+        <li><a>{{ produit.prix_promotion }} DH</a></li>
+    {% endfor %}
+</ul>
+
+<ul class="Customer">
+    <li class="topic">STOCK</li>
+    {% for produit in produits %}
+        <li><a>{{ produit.qte_en_stock }}</a></li>
+    {% endfor %}
+</ul>
+
+<ul class="Customer">
+    <li class="topic">SEUIL MIN</li>
+    {% for produit in produits %}
+        <li><a>{{ produit.seuil_min }}</a></li>
+    {% endfor %}
+</ul>
+
+<ul class="Customer">
+    <li class="topic">ACTION</li>
+    {% for produit in produits %}
+        <li>
+            <a href="{% url 'supprimer_produit' produit.id_produit %}">
+                <i class="fa-solid fa-trash" style="color:red;margin-right:15px;"></i>
+            </a>
+            <a href="{% url 'modifier_produit' produit.id_produit %}">
+                <i class="fa-sharp fa-solid fa-pen-to-square" style="color:blue;"></i>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

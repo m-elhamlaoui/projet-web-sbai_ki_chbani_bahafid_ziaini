@@ -1,0 +1,124 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+{% include 'link.html' %}
+
+ <link rel="stylesheet" href="{% static 'css/stylep.css' %}">
+ 
+  </head>
+  <body class="common-home res layout-1">
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+
+
+    {% include 'header.html' %}
+
+      
+      <!-- Main Container  -->
+
+
+                         <!-- Main Container  -->
+<div class="main-container container">
+    <div id="content">
+                       
+     <!-- POSTER UN AVIS -->
+
+     <section >
+        <form id="ajoutAvisService">{% csrf_token %} {{ form.as_p }}
+  <div class="container my-5 py-5 text-dark">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-6">
+        <div class="card">
+          <div class="card-body p-4">
+            <div class="d-flex flex-start w-100">
+              <img class="rounded-circle shadow-1-strong me-3"
+                src="{{ request.session.photo }}" alt="avatar" width="65"
+                height="65" />
+              <div class="w-100">
+               
+               <input type="text" name="id_utilisateur" value="{{ request.session.id_utilisateur }}" hidden>
+                <div class="form-outline">
+                  <textarea name="avis" class="form-control" id="textAreaExample" rows="6" required></textarea>
+
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="index.php"><button type="button" class="btn btn-danger">Retour</button></a>
+                  <button type="submit" class="btn btn-success">
+                    Ajouter <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                  </button>
+                </div>
+                <div class="alert alert-success alert-avis-success" role="alert">  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</section>
+        
+    </div>
+</div>
+
+
+
+      <!-- //Main Container --> 
+      
+      
+      {% include 'modalProfil.html' %}
+
+
+      {% include 'footer.html' %}
+
+
+
+  </div>
+
+
+  {% include 'script.html' %}
+
+<script> 
+
+$(".alert-avis-success").hide();
+
+</script>
+
+<script>
+
+    //AVIS
+
+$("#ajoutAvisService").on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: './../ajouter_avis_service/',
+        data: new FormData(this),
+        dataType: 'json',
+        contentType: false,
+        cache: false,
+        processData:false,
+        success: function(response){
+            if(response.status == 'success'){
+        
+            $(".alert-avis-success").show();
+            $(".alert-avis-success").html("VOTRE AVIS SUR NOTRE SERVICE A ETE ENREGISTRE AVEC SUCCES A BIENTOT !");
+            setTimeout(function(){window.location.href='./../../users_epicerie/'},5000);
+           }
+
+
+        
+            }
+
+            
+        });
+    
+});
+</script>
+
+<script src="{% static 'js/panier.js' %}"></script>
+  
+
+  </body>
+</html>
