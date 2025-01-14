@@ -60,7 +60,7 @@ Le fournisseur peut :
    - Déploiement sur des serveurs web comme Nginx ou Apache avec Gunicorn.
 
 5. **Base de Données** :
-   - Support des bases relationnelles comme PostgreSQL.
+   - MySQL pour la base relationnelle.
 
 6. **Documentation** :
    - README détaillé comprenant la description, les instructions d'installation, et un guide utilisateur.
@@ -71,7 +71,7 @@ Le fournisseur peut :
 
 - **Frontend** : HTML, CSS, JavaScript (optionnellement, intégrer Bootstrap pour le design responsive).
 - **Backend** : Python avec Django.
-- **Base de Données** : PostgreSQL (ou SQLite en mode développement).
+- **Base de Données** : MySQL.
 - **Serveur Web** : Gunicorn/Nginx.
 - **Outils de Build** : Gestion des dépendances avec `pip` et `virtualenv`.
 - **Contrôle de Version** : Git (avec utilisation de GitHub/GitLab pour la gestion des issues).
