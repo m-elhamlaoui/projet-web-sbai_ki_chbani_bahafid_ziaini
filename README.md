@@ -8,44 +8,36 @@ Créer une plateforme e-commerce complète et professionnelle en appliquant les 
 ## Description Fonctionnelle
 
 ### Utilisateurs et Rôles
-1. **Client** :
-   - Parcourir les produits par catégories.
-   - Rechercher des produits spécifiques avec filtres avancés.
-   - Ajouter des produits au panier et passer des commandes.
-   - Gérer un compte personnel : modification des informations, historique des commandes, etc.
 
-2. **Administrateur** :
-   - Gérer le catalogue de produits : ajout, suppression et modification.
-   - Suivre les commandes clients et leur état.
-   - Gérer les utilisateurs (clients) et les droits.
+#### **Client**
+Le client peut :
+- S'inscrire et se connecter.
+- Modifier ses informations de profil.
+- Ajouter un avis sur le service Gestepice.
+- Ajouter un avis et recommander des produits.
+- Rechercher des produits par catégorie et/ou mot-clé.
+- Consulter la liste de ses commandes et imprimer les factures.
+- Ajouter des produits au panier et passer une commande.
+- Contacter l'administrateur via un chat en temps réel.
 
-### Fonctionnalités Clés
-1. **Gestion des Produits** :
-   - Ajout de produits avec des attributs comme le nom, la description, le prix, la quantité en stock, etc.
-   - Organisation des produits par catégories.
+#### **Administrateur**
+L'administrateur peut :
+- Consulter les différentes statistiques de l’épicerie via un **dashboard interactif**.
+- Ajouter, modifier et supprimer des produits et catégories.
+- Consulter la liste des commandes passées.
+- Consulter la liste des produits fabriqués par les étudiants de l'INPT et gérer les paiements pour ces derniers.
+- Recharger le solde des utilisateurs.
+- Répondre aux préoccupations des clients via un chat.
 
-2. **Panier d'Achat** :
-   - Ajouter, modifier ou supprimer des articles dans le panier.
-   - Calcul automatique des totaux avec taxes et frais de livraison.
-
-3. **Commande** :
-   - Passation de commandes avec confirmation par e-mail.
-   - Système de suivi des commandes.
-
-4. **Gestion des Paiements** :
-   - Intégration d'un module de paiement sécurisé (par ex., PayPal ou carte bancaire).
-   - Génération automatique de factures.
-
-5. **Multilingue et Multidevise** :
-   - Interface disponible en plusieurs langues.
-   - Support de devises multiples avec taux de conversion.
-
-6. **Moteur de Recherche** :
-   - Recherche plein texte et avec filtres avancés (prix, catégories, etc.).
-
-7. **Gestion des Sessions** :
-   - Authentification sécurisée des utilisateurs avec hachage des mots de passe.
-   - Gestion des sessions utilisateur pour personnalisation.
+#### **Fournisseur**
+Le fournisseur peut :
+- S'inscrire et se connecter pour accéder à son espace dédié.
+- Ajouter, modifier et supprimer ses produits disponibles sur la plateforme.
+- Consulter les commandes des clients pour ses produits spécifiques.
+- Suivre l’état de paiement pour les commandes de ses produits.
+- Recevoir des notifications pour les commandes des clients.
+- Gérer les stocks et voir les alertes en cas de rupture de stock.
+- Télécharger un rapport des ventes mensuelles pour ses produits.
 
 ---
 
@@ -53,22 +45,22 @@ Créer une plateforme e-commerce complète et professionnelle en appliquant les 
 
 ### Exigences Techniques
 1. **Architecture** :
-   - Architecture multi-tiers (présentation, métier, persistance).
-   - Application de patrons de conception (DAO, MVC, Singleton, etc.).
+   - Basée sur le framework Django (MVC/MVT).
+   - Structure modulaire et réutilisable avec des apps Django.
 
 2. **Performance** :
    - Temps de réponse inférieur à 2 secondes pour toutes les requêtes utilisateur.
 
 3. **Sécurité** :
-   - Utilisation d'algorithmes de hachage pour les mots de passe (ex. : bcrypt).
-   - Prévention des attaques CSRF et XSS.
+   - Utilisation de Django pour la gestion des sessions et de l’authentification.
+   - Prévention des attaques CSRF et XSS via les middlewares Django.
 
 4. **Portabilité** :
    - Compatible avec les principaux navigateurs (Chrome, Firefox, Edge).
-   - Déploiement sur des serveurs compatibles Java EE.
+   - Déploiement sur des serveurs web comme Nginx ou Apache avec Gunicorn.
 
 5. **Base de Données** :
-   - Supporte plusieurs SGBD relationnels (MySQL, PostgreSQL).
+   - Support des bases relationnelles comme PostgreSQL.
 
 6. **Documentation** :
    - README détaillé comprenant la description, les instructions d'installation, et un guide utilisateur.
@@ -77,11 +69,11 @@ Créer une plateforme e-commerce complète et professionnelle en appliquant les 
 
 ## Stack Technique
 
-- **Frontend** : HTML, CSS, JavaScript (ou un framework comme JSF pour l’intégration Java).
-- **Backend** : Java avec Servlet/JSP et intégration de frameworks comme Spring ou JSF.
-- **Base de Données** : MySQL/PostgreSQL avec JDBC pour la gestion des transactions.
-- **Serveur d’Application** : Apache Tomcat ou GlassFish.
-- **Outils de Build** : Maven ou Gradle.
+- **Frontend** : HTML, CSS, JavaScript (optionnellement, intégrer Bootstrap pour le design responsive).
+- **Backend** : Python avec Django.
+- **Base de Données** : PostgreSQL (ou SQLite en mode développement).
+- **Serveur Web** : Gunicorn/Nginx.
+- **Outils de Build** : Gestion des dépendances avec `pip` et `virtualenv`.
 - **Contrôle de Version** : Git (avec utilisation de GitHub/GitLab pour la gestion des issues).
 
 ---
@@ -90,25 +82,22 @@ Créer une plateforme e-commerce complète et professionnelle en appliquant les 
 
 1. **Phase 1 : Analyse et Conception** :
    - Création des diagrammes UML : cas d’utilisation, classes, et séquences.
-   - Choix des technologies et des frameworks.
+   - Définition de la structure des modèles Django.
 
 2. **Phase 2 : Développement** :
-   - Mise en place de l’architecture initiale (MVC).
+   - Mise en place de l’environnement Django avec un projet initial.
+   - Création des apps principales :
+     - `users` pour la gestion des utilisateurs.
+     - `products` pour les produits.
+     - `orders` pour les commandes.
+     - `reviews` pour les avis.
+     - `chat` pour la messagerie en temps réel.
    - Développement des fonctionnalités principales.
 
 3. **Phase 3 : Tests** :
-   - Rédaction et exécution de tests unitaires (JUnit).
+   - Rédaction et exécution de tests unitaires avec `pytest` ou `Django Test`.
    - Tests fonctionnels pour validation des cas d’utilisation.
 
 4. **Phase 4 : Documentation et Livraison** :
    - Création d’une vidéo démonstrative.
    - Livraison du code source dans un dépôt Git.
-
----
-
-## Bonus
-- Intégration d’un système de gestion des issues avec GitHub.
-- Documentation automatisée du code avec des outils comme Javadoc.
-- Ajout d’un tableau de bord analytique pour les administrateurs.
-
----
