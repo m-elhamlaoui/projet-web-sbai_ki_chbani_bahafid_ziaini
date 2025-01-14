@@ -25,8 +25,11 @@ urlpatterns = [
     path('utilisateurs_en_ligne/', views.utilisateurs_en_ligne, name='utilisateurs_en_ligne'),
     path('recherche_utilisateurs/', views.recherche_utilisateurs, name='recherche_utilisateurs'),
     path('chat_admin/', views.chat_admin, name='chat_admin'),
+<<<<<<< HEAD
     path('message/<int:user_id>/', views.message, name='message'),
     path('affiche_conversation_admin/', views.affiche_conversation_admin, name='affiche_conversation_admin'),
     path('message_action_admin/', views.message_action_admin, name='message_action_admin'),
+=======
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
 
 ]

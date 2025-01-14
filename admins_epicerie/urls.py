@@ -16,5 +16,8 @@ urlpatterns = [
     path('modifier_produit_ajax/', views.modifier_produit_ajax, name='modifier_produit_ajax'),
     path('ajout_categorie/', views.ajout_categorie, name='ajout_categorie'),
     path('ajout_produit/', views.ajout_produit, name='ajout_produit'),
+<<<<<<< HEAD
     path('deconnexion_admin/', views.deconnexion_admin, name='deconnexion_admin'),
+=======
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
 ]

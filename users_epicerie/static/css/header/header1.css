@@ -693,6 +693,7 @@
 
 .wrapper-boxed .typeheader-1 .telephone ul li:first-child {
   display: none; }
+<<<<<<< HEAD
 
 /* Language Switcher Styles */
 .language-switcher {
@@ -719,3 +720,5 @@
   transform: scale(1.1); /* Slight zoom on hover */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
+=======
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc

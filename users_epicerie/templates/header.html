@@ -1,5 +1,8 @@
        {% load static %}
+<<<<<<< HEAD
        {% load i18n %} 
+=======
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
        <!-- Header Container  -->
       <header id="header" class="typeheader-1">
         <!-- Header Top -->
@@ -7,6 +10,7 @@
           <div class="container">
             <div class="row">
               <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
+<<<<<<< HEAD
                 <div class="hidden-md hidden-sm hidden-xs welcome-msg">{% trans 'Vous trouverez ici tous les produits avec les meilleures qualités possibles' %}<span>{% trans 'Bienvenue sur GestEpice' %}</span>
                 </div>
               </div>
@@ -19,6 +23,9 @@
                   <a href="?lang=en" title="English">
                     <img src="{% static 'image/flags/en.png' %}" alt="English" style="width: 24px; height: 24px;">
                   </a>
+=======
+                <div class="hidden-md hidden-sm hidden-xs welcome-msg"> Vous trouverez ici tous les produits avec les meilleures qualités possibles <span>Bienvenue sur GestEpice</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                 </div>
               </div>
             </div>
@@ -49,7 +56,11 @@
                       <div id="search0" class="search input-group form-group">
                         <div class="select_category filter_type icon-select hidden-sm hidden-xs">
                           <select class="no-border" name="category_id">
+<<<<<<< HEAD
                             <option value="">{% trans 'Toutes les catégories' %}</option> {% for cate in categories %} <option value="{{ cate.id_categorie }}">{{ cate.nom_categorie }}</option> {% endfor %}
+=======
+                            <option value="">Toutes les catégories</option> {% for cate in categories %} <option value="{{ cate.id_categorie }}">{{ cate.nom_categorie }}</option> {% endfor %}
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                           </select>
                         </div>
                         <input class="autosearch-input form-control" type="text" size="50" autocomplete="off" placeholder="Rechercher ici..." name="search">
@@ -71,7 +82,11 @@
                         <span class="icon-c">
                           <i class="fa fa-shopping-bag"></i>
                         </span>
+<<<<<<< HEAD
                         <div class="shopcart-inner"> {% if request.session.utilisateur_connecte %} <p class="text-shopping-cart">{% trans 'Mon Solde' %}</p> {% endif %} <span class="total-shopping-cart cart-total-full">
+=======
+                        <div class="shopcart-inner"> {% if request.session.utilisateur_connecte %} <p class="text-shopping-cart">Mon Solde</p> {% endif %} <span class="total-shopping-cart cart-total-full">
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                             <span class="items_cart badge"></span>
                             <span class="items_cart2"> item(s)</span> {% if request.session.utilisateur_connecte %} <span class="items_carts">( <i class="fa-solid fa-wallet"></i> {{ request.session.solde }} DH) </span> {% endif %} </span>
                         </div>
@@ -117,7 +132,11 @@
                                   <span></span>
                                   <span></span>
                                   <span></span>
+<<<<<<< HEAD
                                 </div> {% trans 'Les Catégories' %}
+=======
+                                </div> Les Catégories
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                               </div>
                             </div>
                           </div>
@@ -125,7 +144,11 @@
                         <div class="navbar-header">
                           <button type="button" id="show-verticalmenu" data-toggle="collapse" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
+<<<<<<< HEAD
                             <span>{% trans 'Les Catégories' %}</span>
+=======
+                            <span>Les Catégories</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                           </button>
                         </div>
                         <div class="vertical-wrapper">
@@ -170,20 +193,32 @@
                               </li> {% endif %} <li class="with-sub-menu hover">
                                 <p class="close-menu"></p>
                                 <a href="{%url 'index' %}#nosproduits" class="clearfix">
+<<<<<<< HEAD
                                   <strong>{% trans 'Nos Produits' %}</strong>
+=======
+                                  <strong>Nos Produits</strong>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                   <img class="label-hot" src="{% static 'image/new-icon.png' %}" alt="icon items">
                                 </a>
                               </li>
                               <li class="with-sub-menu hover">
                                 <p class="close-menu"></p>
                                 <a href="{% url 'index' %}#avis" class="clearfix">
+<<<<<<< HEAD
                                   <strong>{% trans 'Avis' %}</strong>
+=======
+                                  <strong>Avis</strong>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </a>
                               </li>
                               <li class="with-sub-menu hover">
                                 <p class="close-menu"></p>
                                 <a href="{% url 'chat' %}" class="clearfix">
+<<<<<<< HEAD
                                   <strong>{% trans 'CONTACTER ADMIN' %}</strong>
+=======
+                                  <strong>CONTACTER ADMIN</strong>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </a>
                               </li>
                               <li class="">

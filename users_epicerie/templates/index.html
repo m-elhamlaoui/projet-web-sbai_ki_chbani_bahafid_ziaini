@@ -1,5 +1,8 @@
  {% load static %}
+<<<<<<< HEAD
 {% load i18n %}
+=======
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,7 +53,11 @@
                 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 col3">
                   <div class="module product-simple extra-layout1">
                     <h3 class="modtitle">
+<<<<<<< HEAD
                       <span>{% trans 'Plus Vendus' %}</span>
+=======
+                      <span>Plus Vendus</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                     </h3>
                     <div class="modcontent">
                       <div id="so_extra_slider_1" class="so-extraslider">
@@ -88,7 +95,11 @@
             <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 main-left">
               <div class="module product-simple extra-layout1">
                 <h3 class="modtitle">
+<<<<<<< HEAD
                   <span>{% trans 'Nos Derniers Produits' %}</span>
+=======
+                  <span>Nos Derniers Produits</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                 </h3>
                 <div class="modcontent">
                   <div id="so_extra_slider_1" class="so-extraslider">
@@ -181,7 +192,11 @@
               </div>
               <div class="module extra" id="avis">
                 <h3 class="modtitle">
+<<<<<<< HEAD
                   <span>{% trans 'Produits recommandés' %}</span>
+=======
+                  <span>Produits recommandés</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                 </h3>
                 <div class="modcontent">
                   <div id="so_extra_slider_1" class="so-extraslider">
@@ -200,7 +215,11 @@
                               <div class="so-quickview">
                                 <a class="iframe-link btn-button quickview quickview_handler visible-lg" href="{% url 'quickview' produit.id_produit %}" title="Voir Plus" data-fancybox-type="iframe">
                                   <i class="fa fa-eye"></i>
+<<<<<<< HEAD
                                   <span>{% trans 'Voir Plus' %}</span>
+=======
+                                  <span>Voir Plus</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </a>
                               </div>
                               <!--end quickview-->
@@ -212,10 +231,17 @@
                                 <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}" />
                                 <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1" /> {% if request.session.utilisateur_connecte %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}">
                                   <i class="fa fa-heart-o"></i>
+<<<<<<< HEAD
                                   <span>{% trans 'Recommander' %}</span>
                                 </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
                                   <i class="fa fa-heart-o"></i>
                                   <span>{% trans 'Recommander' %}</span>
+=======
+                                  <span>Recommander</span>
+                                </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </button> {% endif %} {% endif %}
                               </div>
                               <div class="caption hide-cont">
@@ -238,7 +264,11 @@
               </div>
               <div class="module testimonials" id="contact">
                 <h3 class="modtitle">
+<<<<<<< HEAD
                   <span>{% trans 'Avis sur GestEpice' %}</span>
+=======
+                  <span>Avis sur GestEpice</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                 </h3>
                 <div class="slider-testimonials">
                   <div class="yt-content-slider contentslider" data-rtl="no" data-loop="yes" data-autoplay="no" data-autoheight="no" data-autowidth="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column00="1" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-pagination="yes" data-lazyload="yes" data-hoverpause="yes"> {% for avisU in avis %} <div class="item">
@@ -256,7 +286,11 @@
               <div id="so_category_slider_1" class="so-category-slider container-slider module cateslider1">
                 <div class="modcontent" id="nosproduits">
                   <div class="page-top">
+<<<<<<< HEAD
                     <div class="page-title-categoryslider">{% trans 'Produits les plus commentés' %}</div>
+=======
+                    <div class="page-title-categoryslider">Produits les plus commentés</div>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                     <div class="item-sub-cat"></div>
                   </div>
                   <div class="categoryslider-content">
@@ -282,7 +316,11 @@
                               <div class="so-quickview">
                                 <a class="iframe-link btn-button quickview quickview_handler visible-lg" href="{% url 'quickview' produit.id_produit %}" title="Voir Plus" data-fancybox-type="iframe">
                                   <i class="fa fa-eye"></i>
+<<<<<<< HEAD
                                   <span>{% trans 'Voir Plus' %}</span>
+=======
+                                  <span>Voir Plus</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </a>
                               </div>
                               <!-- End Quickview -->
@@ -294,10 +332,17 @@
                                 <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}">
                                 <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1"> {% endif %} {% if request.session.utilisateur_connecte %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}">
                                   <i class="fa fa-heart-o"></i>
+<<<<<<< HEAD
                                   <span>{% trans 'Recommander' %}</span>
                                 </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
                                   <i class="fa fa-heart-o"></i>
                                   <span>{% trans 'Recommander' %}</span>
+=======
+                                  <span>Recommander</span>
+                                </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </button> {% endif %}
                               </div>
                               <div class="caption hide-cont">
@@ -330,7 +375,11 @@
               <div class="module deals-layout1">
                 <div class="head-title">
                   <div class="modtitle">
+<<<<<<< HEAD
                     <span class="page-title-categoryslider">{% trans 'Nos Produits' %}</span>
+=======
+                    <span class="page-title-categoryslider">Nos Produits</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                     <div class="cslider-item-timer">
                       <div class="product_time_maxprice"></div>
                     </div>
@@ -353,7 +402,11 @@
                               <div class="so-quickview">
                                 <a class="iframe-link btn-button quickview quickview_handler visible-lg" href=" {% url 'quickview' produit.id_produit %}" title="clique pour voir" data-fancybox-type="iframe">
                                   <i class="fa fa-eye"></i>
+<<<<<<< HEAD
                                   <span>{% trans 'clique pour voir' %}</span>
+=======
+                                  <span>clique pour voir</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </a>
                               </div>
                               <!-- End Quickview -->
@@ -365,10 +418,17 @@
                                 <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}">
                                 <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1"> {% endif %} {% if request.session.utilisateur_connecte %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}">
                                   <i class="fa fa-heart-o"></i>
+<<<<<<< HEAD
                                   <span>{% trans 'Recommander' %}</span>
                                 </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
                                   <i class="fa fa-heart-o"></i>
                                   <span>{% trans 'Recommander' %}</span>
+=======
+                                  <span>Recommander</span>
+                                </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </button> {% endif %}
                               </div>
                               <div class="caption hide-cont">
@@ -409,7 +469,11 @@
               <div id="so_category_slider_1" class="so-category-slider container-slider module cateslider1">
                 <div class="modcontent">
                   <div class="page-top">
+<<<<<<< HEAD
                     <div class="page-title-categoryslider">{% trans 'PLATS FAITS PAR LES INPTISTES' %}</div>
+=======
+                    <div class="page-title-categoryslider">PLATS FAITS PAR LES INPTISTES</div>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                     <div class="item-sub-cat"></div>
                   </div>
                   <div class="categoryslider-content">
@@ -434,7 +498,11 @@
                               <div class="so-quickview">
                                 <a class="iframe-link btn-button quickview quickview_handler visible-lg" href="{% url 'quickview' produit.id_produit %}" title="clique pour voir" data-fancybox-type="iframe">
                                   <i class="fa fa-eye"></i>
+<<<<<<< HEAD
                                   <span>{% trans 'clique pour voir' %}</span>
+=======
+                                  <span>clique pour voir</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </a>
                               </div>
                               <!-- End Quickview -->
@@ -446,10 +514,17 @@
                                 <input type="hidden" name="hidden_price" id="price{{ produit.id_produit }}" value="{{ produit.prix_promotion }}">
                                 <input type="hidden" name="quantity" id="quantity{{ produit.id_produit }}" class="form-control" value="1"> {% endif %} {% if request.session.utilisateur_connecte %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="{{ produit.id_produit }}">
                                   <i class="fa fa-heart-o"></i>
+<<<<<<< HEAD
                                   <span>{% trans 'Recommander' %}</span>
                                 </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
                                   <i class="fa fa-heart-o"></i>
                                   <span>{% trans 'Recommander' %}</span>
+=======
+                                  <span>Recommander</span>
+                                </button> {% else %} <button type="button" class="wishlist btn-button recommander" title="Recommander" id="-2">
+                                  <i class="fa fa-heart-o"></i>
+                                  <span>Recommander</span>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 </button> {% endif %}
                               </div>
                               <div class="caption hide-cont">

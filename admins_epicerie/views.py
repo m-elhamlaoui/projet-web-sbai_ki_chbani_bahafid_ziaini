@@ -476,6 +476,7 @@ def ajout_produit(request):
             reponse = "Tous les champs sont obligatoires !"
 
     return JsonResponse(reponse, safe=False)
+<<<<<<< HEAD
 
 
 
@@ -495,3 +496,5 @@ def deconnexion_admin(request):
 
     # Rediriger vers la page d'accueil
     return redirect('index')
+=======
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc

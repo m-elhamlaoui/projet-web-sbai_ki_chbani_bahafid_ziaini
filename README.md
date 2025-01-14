@@ -8,44 +8,56 @@ Créer une plateforme e-commerce complète et professionnelle en appliquant les 
 ## Description Fonctionnelle
 
 ### Utilisateurs et Rôles
-1. **Client** :
-   - Parcourir les produits par catégories.
-   - Rechercher des produits spécifiques avec filtres avancés.
-   - Ajouter des produits au panier et passer des commandes.
-   - Gérer un compte personnel : modification des informations, historique des commandes, etc.
 
-2. **Administrateur** :
-   - Gérer le catalogue de produits : ajout, suppression et modification.
-   - Suivre les commandes clients et leur état.
-   - Gérer les utilisateurs (clients) et les droits.
+#### **Client**
+Le client peut :
+- S'inscrire et se connecter.
+- Modifier ses informations de profil.
+- Ajouter un avis sur le service Gestepice.
+- Ajouter un avis et recommander des produits.
+- Rechercher des produits par catégorie et/ou mot-clé.
+- Consulter la liste de ses commandes et imprimer les factures.
+- Ajouter des produits au panier et passer une commande.
+- Contacter l'administrateur via un chat en temps réel.
 
-### Fonctionnalités Clés
-1. **Gestion des Produits** :
-   - Ajout de produits avec des attributs comme le nom, la description, le prix, la quantité en stock, etc.
-   - Organisation des produits par catégories.
+#### **Administrateur**
+L'administrateur peut :
+- Consulter les différentes statistiques de l’épicerie via un **dashboard interactif**.
+- Ajouter, modifier et supprimer des produits et catégories.
+- Consulter la liste des commandes passées.
+- Consulter la liste des produits fabriqués par les étudiants de l'INPT et gérer les paiements pour ces derniers.
+- Recharger le solde des utilisateurs.
+- Répondre aux préoccupations des clients via un chat.
 
-2. **Panier d'Achat** :
-   - Ajouter, modifier ou supprimer des articles dans le panier.
-   - Calcul automatique des totaux avec taxes et frais de livraison.
+#### **Fournisseur**
+Le fournisseur peut :
+- S'inscrire et se connecter pour accéder à son espace dédié.
+- Ajouter, modifier et supprimer ses produits disponibles sur la plateforme.
+- Consulter les commandes des clients pour ses produits spécifiques.
+- Suivre l’état de paiement pour les commandes de ses produits.
+- Recevoir des notifications pour les commandes des clients.
+- Gérer les stocks et voir les alertes en cas de rupture de stock.
+- Télécharger un rapport des ventes mensuelles pour ses produits.
 
-3. **Commande** :
-   - Passation de commandes avec confirmation par e-mail.
-   - Système de suivi des commandes.
+---
 
-4. **Gestion des Paiements** :
-   - Intégration d'un module de paiement sécurisé (par ex., PayPal ou carte bancaire).
-   - Génération automatique de factures.
+## Diagramme de Classes
 
-5. **Multilingue et Multidevise** :
-   - Interface disponible en plusieurs langues.
-   - Support de devises multiples avec taux de conversion.
+### Description
+Le diagramme de classes ci-dessous représente la structure conceptuelle du projet e-commerce, en montrant les principales entités (Client, Admin, Supplier, Product, Order, Review, et Chat) ainsi que leurs relations. Il est essentiel pour comprendre l'organisation des données et des interactions dans le système.
 
-6. **Moteur de Recherche** :
-   - Recherche plein texte et avec filtres avancés (prix, catégories, etc.).
+### Diagramme
+![Diagramme de classes](https://www.plantuml.com/plantuml/png/jPN1RiCs38RlUGeZbsqOUkWr68eEtMaOrc5z086Lc9YOB7aadI0OzkwpOyQ9DNNe3iqXW7xzfibF5Fqi2gn35pVVD3_XdX8sscBp4WcJDZw2oERoVvN-sZJZx_k6mgwXfBOQ13b1Xxj6b2aTJEv1v9Gv539sGB6qSjvJHDUJru7BG2GE1cqnANbG70E-vnnja_50eiZVVcT2p0TAoshe0oWwUy4YGmYEyKXuMYH1ODzEpZ1ubKMVJ2vpGBvfFLDIH-cOoQ-3QdOUM6_E21xdnnVDjw3kHDew2DqbrxytwnFuST9N1p0hNyK_WBJl6JYu00gxvkUtrr-hE3j8SC05KgbxK3na9gpXApJH8M3IVySQ1OyYDmESEqnt1iQH88-lUuS8oUFTXlGvpOSmCfOAsRUXxoCXh-0kubVnfNJ4f9dFk-ON4ltXjxdcfy_riC5TWlmdMsNmVrIP8HtHfQoq9mzAETrsGpwbc24uWOZY6FlCMg5dUQ_WNRKwkmgtWEAP-Yc3aYYJ7ztxc45D4irZENyEa9JqV1_PUkrSn9XljHZeto-hfxiBQkrM3eXI3XXn9PSeNZcikyYKEWP_cPzkBLfmgJU5PeNeeCj3qf89w215tPuH58E3qJnLfDIXRHqm8O_ITM1LgfavhSenwN_NKweCEcQvUZXtKtD-fe0opvSMLjqt2_KS1LD0BhAnUr3A7Oh0eUnKmQG5q2MoiqVA6sPw2PanpdUkfLuszZdTFcwRXuTcsq4wRwr_TlCdGpRpScsn5XbDFYS5IlLGTdQZxSIaOonRs-xaUxmFnZ2Pva_C1o-q8LHtMGwxPJBBTJJNxIrCPflMuZJNgp0V9LAwP6Xp-cCgFUSZXS9PGJpHA4tbQ-qyPJqoDy-Omj35Vm00)
 
-7. **Gestion des Sessions** :
-   - Authentification sécurisée des utilisateurs avec hachage des mots de passe.
-   - Gestion des sessions utilisateur pour personnalisation.
+---
+
+## Diagramme de Cas d'Utilisation
+
+### Description
+Le diagramme de cas d'utilisation ci-dessous représente les principales interactions entre les acteurs du système (Client, Admin, Supplier) et les fonctionnalités qu'ils peuvent effectuer. Les cas d'utilisation communs à plusieurs acteurs (comme "S'inscrire et se connecter" et "Contacter via le chat") sont également mis en évidence.
+
+### Diagramme
+![Diagramme de cas d'utilisation](https://www.plantuml.com/plantuml/png/dLHBRjim4Dtx58Diicc0o7yNGH33YoAB0aNS782LnZ5RYbJvCNebdKCNwr0VIdGYBR8myCHvxmtvEFIJiKnRbukPm9C5gq3pjxE5Z6jCBLTonbAhD1m4Hsc16JYqA_iivz8lxDk5eoiAOcc_TfpDRk7L8AJCe85JS9WvWtuDNW-99zvyLna_UPKW7fV4p9dlQo13ABGwSN4p4CrhqGkcPzJ-HopZQPdZbW3JrD5MvPlI744vo9MzIqLL3ZqMjSV-jtBsse0vyf0SzP2_hFa_c354Tv8EfVASoGo7f5LawYYP2pTWdCUTFoZdlyZcmjD8lQxL1pgs4rul60XkBFhTXNPcgDZKYkUyq3nljtLYgNMQVEFikxiQYBUr-5jLQjzh603QFi2uuUvwYyETKMh6L6MiIEu_a1ZBB9sC_tNqSU6C5Y5ZvlnBCPr5wkJT9Xd77AKrTIfLQLt66Nr6gdv0c7whXM2KoDea1SThmQ8HL6MXPAOHcFlNyiB-oCk-JpKC_D1jEHo3Bv1tqwqS6A9hdiSZ5-zbDPsnSXhCc7OTnqL1g_IFlq-DALuKRzeoWTfYhDnqaVKqgIpjEmqlySEHJven-bcLzC2wl9q4pOf2QLiRNL3wTZwy0rae2QxBSEWKXikorAAEWn-y_cQYZhTScbHpZVvytaz9YLvODtgMgN0PWaRH7E3CY-W_Y1h2tTrZO_WL7XvuetXyfD9olBGQBwt7IvlnKh8RguqV8pndUiRZphk9flSJjMIYDf-eBJvraF22_CkPS5zDrDOJjQdejv-ybfUngJgqeYIWUK2BW9O1hG9Q1xJfNNPni_Zkzorh6z0keEI-XqaFvprS49pk4Yxcs16NFLprSDt3JG-t0PB_4yhCvU8_)
 
 ---
 
@@ -53,22 +65,22 @@ Créer une plateforme e-commerce complète et professionnelle en appliquant les 
 
 ### Exigences Techniques
 1. **Architecture** :
-   - Architecture multi-tiers (présentation, métier, persistance).
-   - Application de patrons de conception (DAO, MVC, Singleton, etc.).
+   - Basée sur le framework Django (MVC/MVT).
+   - Structure modulaire et réutilisable avec des apps Django.
 
 2. **Performance** :
    - Temps de réponse inférieur à 2 secondes pour toutes les requêtes utilisateur.
 
 3. **Sécurité** :
-   - Utilisation d'algorithmes de hachage pour les mots de passe (ex. : bcrypt).
-   - Prévention des attaques CSRF et XSS.
+   - Utilisation de Django pour la gestion des sessions et de l’authentification.
+   - Prévention des attaques CSRF et XSS via les middlewares Django.
 
 4. **Portabilité** :
    - Compatible avec les principaux navigateurs (Chrome, Firefox, Edge).
-   - Déploiement sur des serveurs compatibles Java EE.
+   - Déploiement sur des serveurs web comme Nginx ou Apache avec Gunicorn.
 
 5. **Base de Données** :
-   - Supporte plusieurs SGBD relationnels (MySQL, PostgreSQL).
+   - MySQL pour la base relationnelle.
 
 6. **Documentation** :
    - README détaillé comprenant la description, les instructions d'installation, et un guide utilisateur.
@@ -77,11 +89,11 @@ Créer une plateforme e-commerce complète et professionnelle en appliquant les 
 
 ## Stack Technique
 
-- **Frontend** : HTML, CSS, JavaScript (ou un framework comme JSF pour l’intégration Java).
-- **Backend** : Java avec Servlet/JSP et intégration de frameworks comme Spring ou JSF.
-- **Base de Données** : MySQL/PostgreSQL avec JDBC pour la gestion des transactions.
-- **Serveur d’Application** : Apache Tomcat ou GlassFish.
-- **Outils de Build** : Maven ou Gradle.
+- **Frontend** : HTML, CSS, JavaScript (optionnellement, intégrer Bootstrap pour le design responsive).
+- **Backend** : Python avec Django.
+- **Base de Données** : MySQL.
+- **Serveur Web** : Gunicorn/Nginx.
+- **Outils de Build** : Gestion des dépendances avec `pip` et `virtualenv`.
 - **Contrôle de Version** : Git (avec utilisation de GitHub/GitLab pour la gestion des issues).
 
 ---
@@ -90,25 +102,24 @@ Créer une plateforme e-commerce complète et professionnelle en appliquant les 
 
 1. **Phase 1 : Analyse et Conception** :
    - Création des diagrammes UML : cas d’utilisation, classes, et séquences.
-   - Choix des technologies et des frameworks.
+   - Définition de la structure des modèles Django.
 
 2. **Phase 2 : Développement** :
-   - Mise en place de l’architecture initiale (MVC).
+   - Mise en place de l’environnement Django avec un projet initial.
+   - Création des apps principales :
+     - `users` pour la gestion des utilisateurs.
+     - `products` pour les produits.
+     - `orders` pour les commandes.
+     - `reviews` pour les avis.
+     - `chat` pour la messagerie en temps réel.
    - Développement des fonctionnalités principales.
 
 3. **Phase 3 : Tests** :
-   - Rédaction et exécution de tests unitaires (JUnit).
+   - Rédaction et exécution de tests unitaires avec `pytest` ou `Django Test`.
    - Tests fonctionnels pour validation des cas d’utilisation.
 
 4. **Phase 4 : Documentation et Livraison** :
    - Création d’une vidéo démonstrative.
    - Livraison du code source dans un dépôt Git.
 
----
 
-## Bonus
-- Intégration d’un système de gestion des issues avec GitHub.
-- Documentation automatisée du code avec des outils comme Javadoc.
-- Ajout d’un tableau de bord analytique pour les administrateurs.
-
----

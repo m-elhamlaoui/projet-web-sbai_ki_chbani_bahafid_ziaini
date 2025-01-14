@@ -60,9 +60,43 @@
 
   {% include 'script.html' %}
 
+<<<<<<< HEAD
   <script type="text/javascript" src="{% static 'js/scriptChatAdmin.js' %}"></script>
 
 
+=======
+<script>
+
+
+$(document).ready(function () {
+    setInterval(function () {
+        if (!$("#recherche").val()) {
+            $.ajax({
+                url: "./../utilisateurs_en_ligne/",  
+                type: "POST",
+                success: function (data) {
+                    $("#rechercheContact").html(data);
+                }
+            });
+        } else {
+            $("#recherche").on("keyup", function () {
+                let recherche = $(this).val();
+                $.ajax({
+                    url: "./../recherche_utilisateurs/", 
+                    type: "POST",
+                    data: { recherche: recherche },
+                    success: function (data) {
+                        $("#rechercheContact").html(data);
+                    }
+                });
+            });
+        }
+    }, 500);
+});
+
+
+</script>
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
   
 
   </body>

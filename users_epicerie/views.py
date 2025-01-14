@@ -14,7 +14,10 @@ from django.views.decorators.csrf import csrf_exempt
 from decimal import Decimal
 from django.db import transaction
 from django.db.models import Q
+<<<<<<< HEAD
 from django.utils.translation import get_language, activate
+=======
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
 
 
 
@@ -77,11 +80,14 @@ def index(request):
         'categories_produits': categories_produits,
     }
 
+<<<<<<< HEAD
     user_language = request.GET.get('lang', 'fr')  # Default to French
     activate(user_language)  # Force language activation
     request.session['django_language'] = user_language  # Save to session
     print(f"Current language: {get_language()}")  # Debug output
 
+=======
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
     return render(request, 'index.html', context)
 
 
@@ -967,7 +973,11 @@ def utilisateurs_en_ligne(request):
                 # Construire le HTML pour l'utilisateur
                 utilisateur_html = f'''
                     <li>
+<<<<<<< HEAD
                         <a href="./../message/{utilisateur.id_utilisateur}/">
+=======
+                        <a href="message.php?id_recepteur={utilisateur.id_utilisateur}">
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
                                     <img src="./../../{utilisateur.photo}" class="rounded-circle user_img">
@@ -1028,7 +1038,11 @@ def recherche_utilisateurs(request):
                     # Construire le HTML pour l'utilisateur
                     utilisateur_html = f'''
                         <li>
+<<<<<<< HEAD
                             <a href="./../message/{utilisateur.id_utilisateur}/">
+=======
+                            <a href="message.php?id_recepteur={utilisateur.id_utilisateur}">
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
                                 <div class="d-flex bd-highlight">
                                     <div class="img_cont">
                                         <img src="./../../{utilisateur.photo}" class="rounded-circle user_img">
@@ -1054,6 +1068,7 @@ def recherche_utilisateurs(request):
 
 
 def chat_admin(request):
+<<<<<<< HEAD
     return render(request,'chatAdmin.html')
 
 
@@ -1167,3 +1182,6 @@ def message_action_admin(request):
         return JsonResponse({'success': 'Message envoyé avec succès.', 'message_id': nouveau_message.id_message})
     else:
         return JsonResponse({'error': 'Méthode non autorisée.'}, status=405)
+=======
+    return render(request,'chatAdmin.html')
+>>>>>>> 8761481975994179d1e09762ec8fee74baf3aafc
