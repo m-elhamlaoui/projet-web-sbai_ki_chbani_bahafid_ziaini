@@ -27,17 +27,14 @@
 8. [Prise en Main](#prise-en-main)
    - [Prérequis](#prérequis)
    - [Installation et Configuration](#installation-et-configuration)
-9. [Hachage des Mots de Passe](#hachage-des-mots-de-passe)
-   - [Fichier `.properties`](#fichier-properties)
-   - [Hachage des Utilisateurs](#hachage-des-utilisateurs)
-10. [Aperçu de l’Application](#aperçu-de-lapplication)
-11. [Base de Données](#base-de-données)
+9. [Aperçu de l’Application](#aperçu-de-lapplication)
+10. [Base de Données](#base-de-données)
     - [Modèle Conceptuel](#modèle-conceptuel)
     - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
-12. [Système de Build](#système-de-build)
-13. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
-14. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
-15. [Annexes](#annexes)
+11. [Système de Build](#système-de-build)
+12. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
+13. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
+14. [Annexes](#annexes)
     - [Ressources Utilisées](#ressources-utilisées)
     - [Références](#références)
 
@@ -199,7 +196,7 @@ Le fournisseur peut :
 
 ### Exigences Techniques
 1. **Architecture** :
-   - Basée sur le framework Django (MVC/MVT).
+   - Basée sur le framework Django MVC.
    - Structure modulaire et réutilisable avec des apps Django.
 
 2. **Performance** :
@@ -310,14 +307,6 @@ python manage.py runserver
 ```
 Maintenant, vous pouvez accéder à l'application en visitant http://localhost:8000 dans votre navigateur web.
 
-
----
-
-## Hachage des Mots de Passe
-
-### Fichier .properties
-
-### Hachage des Utilisateurs
 
 --- 
 
