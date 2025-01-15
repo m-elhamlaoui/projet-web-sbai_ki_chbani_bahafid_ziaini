@@ -98,23 +98,17 @@ Le projet repose sur une stack technologique moderne et des outils robustes pour
 ### Outils DevOps et Build
 - ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 - ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-- **pip** : Gestionnaire de paquets Python pour installer les dépendances backend.
+- ![pip](https://img.shields.io/badge/pip-blueviolet?style=for-the-badge&logo=pypi&logoColor=white)
 - ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
-- **Virtualenv** : Pour isoler l’environnement Python.
+- ![Virtualenv](https://img.shields.io/badge/Virtualenv-red?style=for-the-badge&logo=python&logoColor=white)
 
 ### Tests et Qualité
-- **pytest** : Pour l’écriture et l’exécution des tests unitaires backend.
-- **Flake8** : Linter Python pour garantir la conformité au PEP8 et détecter les erreurs de code.
-
-### Déploiement
-- **Gunicorn** : Serveur WSGI pour le déploiement de l’application Django.
-- **Nginx** : Serveur web pour servir l’application et gérer les requêtes.
-- **Docker** : (Optionnel) Pour containeriser l’application et simplifier le déploiement.
+- ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+- ![Flake8](https://img.shields.io/badge/Flake8-blue?style=for-the-badge&logo=python&logoColor=white)
 
 ### Outils Supplémentaires
 - ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-- ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-- **PlantUML** : Utilisé pour générer les diagrammes UML (classes, cas d’utilisation, etc.).
+- ![PlantUML](https://img.shields.io/badge/PlantUML-brightgreen?style=for-the-badge&logo=plantuml&logoColor=white)
 
 Cette combinaison de technologies garantit une application robuste, maintenable et facile à étendre.
 
