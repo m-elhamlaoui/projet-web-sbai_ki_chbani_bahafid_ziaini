@@ -240,104 +240,79 @@ Cette approche garantit un suivi rigoureux du développement et facilite la coll
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Description Non-Fonctionnelle
-
-### Exigences Techniques
-1. **Architecture** :
-   - Basée sur le framework Django (MVC/MVT).
-   - Structure modulaire et réutilisable avec des apps Django.
-
-2. **Performance** :
-   - Temps de réponse inférieur à 2 secondes pour toutes les requêtes utilisateur.
-
-3. **Sécurité** :
-   - Utilisation de Django pour la gestion des sessions et de l’authentification.
-   - Prévention des attaques CSRF et XSS via les middlewares Django.
-
-4. **Portabilité** :
-   - Compatible avec les principaux navigateurs (Chrome, Firefox, Edge).
-   - Déploiement sur des serveurs web comme Nginx ou Apache avec Gunicorn.
-
-5. **Base de Données** :
-   - MySQL pour la base relationnelle.
-
-6. **Documentation** :
-   - README détaillé comprenant la description, les instructions d'installation, et un guide utilisateur.
+## Structure du Backend
 
 ---
 
-## Stack Technique
+## Prise en Main
 
-- **Frontend** : HTML, CSS, JavaScript (optionnellement, intégrer Bootstrap pour le design responsive).
-- **Backend** : Python avec Django.
-- **Base de Données** : MySQL.
-- **Serveur Web** : Gunicorn/Nginx.
-- **Outils de Build** : Gestion des dépendances avec `pip` et `virtualenv`.
-- **Contrôle de Version** : Git (avec utilisation de GitHub/GitLab pour la gestion des issues).
+### Prérequis
+
+### Installation et Configuration
 
 ---
 
-## Plan de Développement
+## Gestion Multilingue
 
-1. **Phase 1 : Analyse et Conception** :
-   - Création des diagrammes UML : cas d’utilisation, classes, et séquences.
-   - Définition de la structure des modèles Django.
+---
 
-2. **Phase 2 : Développement** :
-   - Mise en place de l’environnement Django avec un projet initial.
-   - Création des apps principales :
-     - `users` pour la gestion des utilisateurs.
-     - `products` pour les produits.
-     - `orders` pour les commandes.
-     - `reviews` pour les avis.
-     - `chat` pour la messagerie en temps réel.
-   - Développement des fonctionnalités principales.
+## Hachage des Mots de Passe
 
-3. **Phase 3 : Tests** :
-   - Rédaction et exécution de tests unitaires avec `pytest` ou `Django Test`.
-   - Tests fonctionnels pour validation des cas d’utilisation.
+### Fichier .properties
 
-4. **Phase 4 : Documentation et Livraison** :
-   - Création d’une vidéo démonstrative.
-   - Livraison du code source dans un dépôt Git.
+### Hachage des Utilisateurs
+
+--- 
+
+## Aperçu de l’Application
+
+
+
+
+
+
+
+---
+
+
+## les contributeurs:
+<a href="https://github.com/Wissal-Chbani"><img src="https://avatars.githubusercontent.com/u/145983090?s=400&u=258f7ed3cbdd8558b75a0da87779aa0fdc3b3aec&v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
+<a href="https://github.com/Kahisorow"><img src="https://avatars.githubusercontent.com/u/143226494?v=4" width="50" style="border-radius: 50%;" alt="User2"/></a>
+<a href="https://github.com/Dsaerex"><img src="https://avatars.githubusercontent.com/u/161311089?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
+<a href="https://github.com/s4l4h"><img src="https://avatars.githubusercontent.com/u/148199664?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
