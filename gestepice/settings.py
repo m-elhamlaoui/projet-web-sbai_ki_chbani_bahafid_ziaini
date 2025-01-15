@@ -37,14 +37,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'gestion_epicerie',
-    'users_epicerie',
-    'admins_epicerie',
+    "gestion_epicerie",
+    "users_epicerie",
+    "admins_epicerie",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -77,16 +78,15 @@ WSGI_APPLICATION = "gestepice.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gestepice',
-        'USER': 'root',  
-        'PASSWORD': '',  
-        'HOST': 'localhost',
-        'PORT': '3306',  
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "gestepice",
+        "USER": "root",
+        "PASSWORD": "",
+        "HOST": "localhost",
+        "PORT": "3306",
     }
 }
-
 
 
 # Password validation
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "fr"
 
 TIME_ZONE = "UTC"
 
@@ -119,6 +119,16 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Add the languages your site supports
+LANGUAGES = [
+    ("fr", "French"),
+    ("en", "English"),
+]
+
+# Path for locale files (translations)
+LOCALE_PATHS = [
+    BASE_DIR / "locale",  # Ensure 'locale' is a directory in your project
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -130,3 +140,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+X_FRAME_OPTIONS = "ALLOWALL"  # Désactive la protection X-Frame-Options

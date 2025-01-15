@@ -1,6 +1,8 @@
 from django.db import models
-from gestion_epicerie.models import Utilisateur
+
 from admins_epicerie.models import Produit
+from gestion_epicerie.models import Utilisateur
+
 
 # Create your models here.
 class Note(models.Model):
@@ -10,7 +12,7 @@ class Note(models.Model):
     note = models.DecimalField(max_digits=10, decimal_places=2)
 
     class Meta:
-        db_table = 'note'
+        db_table = "note"
 
 
 class AvisService(models.Model):
@@ -19,7 +21,7 @@ class AvisService(models.Model):
     avis_service = models.TextField()
 
     class Meta:
-        db_table = 'avisservice'
+        db_table = "avisservice"
 
 
 class AvisProduit(models.Model):
@@ -31,19 +33,19 @@ class AvisProduit(models.Model):
     date_ajout = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        db_table = 'avis_produit'
+        db_table = "avis_produit"
 
 
 class Commande(models.Model):
     id_commande = models.AutoField(primary_key=True)
     date_commande = models.DateTimeField(auto_now_add=True)
     montant_commande = models.DecimalField(max_digits=10, decimal_places=2)
-    commande_pret = models.CharField(max_length=10, default='NON')
+    commande_pret = models.CharField(max_length=10, default="NON")
     id_utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
-    paye = models.CharField(max_length=5, default='OUI')
+    paye = models.CharField(max_length=5, default="OUI")
 
     class Meta:
-        db_table = 'commande'
+        db_table = "commande"
 
 
 class LigneCommande(models.Model):
@@ -52,8 +54,8 @@ class LigneCommande(models.Model):
     qte = models.IntegerField()
 
     class Meta:
-        db_table = 'ligne_commande'
-        unique_together = ('id_commande', 'id_produit')
+        db_table = "ligne_commande"
+        unique_together = ("id_commande", "id_produit")
 
 
 class Facture(models.Model):
@@ -65,7 +67,7 @@ class Facture(models.Model):
     num_facture = models.CharField(max_length=255)
 
     class Meta:
-        db_table = 'facture'
+        db_table = "facture"
 
 
 class Community(models.Model):
@@ -75,19 +77,18 @@ class Community(models.Model):
     date_envoi = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        db_table = 'community'
+        db_table = "community"
 
 
 class Messages(models.Model):
     id_message = models.AutoField(primary_key=True)
-    id_envoyeur = models.IntegerField()  
-    id_recepteur = models.IntegerField() 
+    id_envoyeur = models.IntegerField()
+    id_recepteur = models.IntegerField()
     message = models.TextField()
     date_envoi = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        db_table = 'messages'
-
+        db_table = "messages"
 
 
 class Recommandation(models.Model):
@@ -95,5 +96,5 @@ class Recommandation(models.Model):
     id_utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
     class Meta:
-        db_table = 'recommandation'
-        unique_together = ('id_produit', 'id_utilisateur')
+        db_table = "recommandation"
+        unique_together = ("id_produit", "id_utilisateur")

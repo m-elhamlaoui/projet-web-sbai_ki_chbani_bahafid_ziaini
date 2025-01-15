@@ -1,0 +1,106 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+{% include 'link.html' %}
+
+ <link rel="stylesheet" href="{% static 'css/stylep.css' %}">
+ 
+  </head>
+  <body class="common-home res layout-1">
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+
+
+    {% include 'header.html' %}
+
+      
+      <!-- Main Container  -->
+
+
+
+
+      <div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Mes Commandes</a></li>
+    </ul>
+    
+    <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-9">
+            <h2 class="title">Mes Commandes</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <td class="text-center"></td>
+                            <td class="text-left">ID Commande</td>
+                            <td class="text-center">Nombre De Produit</td>
+                            <td class="text-center">Livre</td>
+                            <td class="text-center">Date</td>
+                            <td class="text-center">Total</td>
+                            <td class="text-center">Paye</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for commande in commandes %}
+                            
+                                <tr>
+                                    <td class="text-center">
+                                        <a href="">
+                                            <img width="85" class="img-thumbnail" title="Ma Commande" alt="Aspire Ultrabook Laptop" src="{% static 'image/imagemescommandes.jpg' %}">
+                                        </a>
+                                    </td>
+                                    <td class="text-left">
+                                        <a href="">{{ commande.id_commande }}</a>
+                                    </td>
+                                    <td class="text-center">{{ commande.nombre_produits }}</td>
+                                    <td class="text-center">{{ commande.commande_pret }}</td>
+                                    <td class="text-center">{{ commande.date_commande }}</td>
+                                    <td class="text-right">{{ commande.montant_commande }} DH</td>
+                                    <td class="text-right">{{ commande.paye }}</td>
+                                    <td class="text-center">
+                                        <a class="btn btn-info" title="" data-toggle="tooltip" href="{% url 'facture' commande.id_commande %}" data-original-title="Imprimer">
+                                            <i class="fa-solid fa-print"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Middle Part End-->
+        <!--Right Part Start -->
+        <!--Right Part End -->
+    </div>
+</div>
+
+
+
+
+
+
+      <!-- //Main Container --> 
+      
+      
+      {% include 'modalProfil.html' %}
+
+
+      {% include 'footer.html' %}
+
+
+
+  </div>
+
+
+  {% include 'script.html' %}
+
+  <script src="{% static 'js/panier.js' %}"></script>
+  
+
+  </body>
+</html>
