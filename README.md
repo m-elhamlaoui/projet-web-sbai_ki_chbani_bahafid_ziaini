@@ -283,6 +283,9 @@ Le code respecte les principes **SOLID** pour assurer une architecture robuste e
 
 ### Conformité à PEP8
 Tout le code Python suit les normes **PEP8** **[REFERENCE](https://peps.python.org/pep-0008/)** pour garantir un style cohérent, ce qui facilite la collaboration en équipe et réduit les problèmes liés au formatage.
+<div align="center" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+  <img src="Screenshots/15.jpeg" alt="Diagramme Entité-Relation" width="70%" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+</div>
 
 ### Utilisation de Linters
 Des **linters**, comme **Flake8**, ont été intégrés dans le processus de développement pour :
@@ -483,7 +486,7 @@ Le modèle conceptuel se compose des entités principales suivantes :
 
 ### Diagramme Entité-Relation (ERD)
 <div align="center" style="display: flex; justify-content: center; align-items: center; text-align: center;">
-  <img src="Screenshots/14.jpeg" alt="Diagramme Entité-Relation" width="70%" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+  <img src="Screenshots/16.jpeg" alt="Diagramme Entité-Relation" width="70%" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
 </div>
 
 Le diagramme ci-dessus représente les relations principales :
