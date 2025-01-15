@@ -259,6 +259,49 @@ Cette approche garantit un suivi rigoureux du développement et facilite la coll
 ---
 
 ## Structure du Backend
+````
+projet/
+├── admins_epicerie/
+│   ├── ...
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── gesteprice/
+│   ├── ...
+│   ├── asgi.py
+│   ├── manage.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── gestion_epicerie/
+│   ├── views.py
+│   └── ...
+├── locale/
+│   ├── en/
+│   │   └── LC_MESSAGES/
+│   │       ├── django.mo
+│   │       └── django.po
+│   ├── fr/
+│       └── ...
+├── users_epicerie/
+│   ├── __pycache__/
+│   ├── image/
+│   ├── migrations/
+│   ├── static/
+│   │   └── css/
+│   ├── templates/
+│   ├── templatetags/
+│   ├── __init__.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── gesteprice.sql
+└── manage.py
+---
+````
 
 ---
 
