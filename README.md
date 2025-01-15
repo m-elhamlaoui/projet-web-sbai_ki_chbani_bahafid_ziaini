@@ -11,22 +11,22 @@
 3. [Architecture et Design](#architecture-et-design)
    - [Diagramme de Classes](#diagramme-de-classes)
    - [Diagramme de Cas d'Utilisation](#diagramme-de-cas-dutilisation)
-4. [Fonctionnalités](#fonctionnalités)
+4. [Fonctionnalités](##description-fonctionnelle)
    - [Client](#client)
    - [Administrateur](#administrateur)
    - [Fournisseur](#fournisseur)
-5. [Bonnes Pratiques de Développement](#bonnes-pratiques-de-développement)
+5. [Description Non-Fonctionnelle](#description-non-fonctionnelle)
+6. [Bonnes Pratiques de Développement](#bonnes-pratiques-de-développement)
    - [Patrons de Conception](#patrons-de-conception)
    - [Conformité à SOLID et Clean Code](#conformité-à-solid-et-clean-code)
    - [Conformité à PEP8](#conformité-à-pep8)
    - [Utilisation de Linters](#utilisation-de-linters)
    - [Git Workflow](#git-workflow)
    - [Tests Unitaires](#tests-unitaires)
-6. [Structure du Backend](#structure-du-backend)
-7. [Prise en Main](#prise-en-main)
+7. [Structure du Backend](#structure-du-backend)
+8. [Prise en Main](#prise-en-main)
    - [Prérequis](#prérequis)
    - [Installation et Configuration](#installation-et-configuration)
-8. [Gestion Multilingue](#gestion-multilingue)
 9. [Hachage des Mots de Passe](#hachage-des-mots-de-passe)
    - [Fichier `.properties`](#fichier-properties)
    - [Hachage des Utilisateurs](#hachage-des-utilisateurs)
@@ -34,17 +34,10 @@
 11. [Base de Données](#base-de-données)
     - [Modèle Conceptuel](#modèle-conceptuel)
     - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
-12. [API et Points de Terminaison](#api-et-points-de-terminaison)
-    - [Endpoints Client](#endpoints-client)
-    - [Endpoints Admin](#endpoints-admin)
-    - [Endpoints Fournisseur](#endpoints-fournisseur)
-13. [Système de Build](#système-de-build)
-14. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
-15. [Déploiement](#déploiement)
-    - [Environnement de Production](#environnement-de-production)
-    - [Hébergement](#hébergement)
-16. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
-17. [Annexes](#annexes)
+12. [Système de Build](#système-de-build)
+13. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
+14. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
+15. [Annexes](#annexes)
     - [Ressources Utilisées](#ressources-utilisées)
     - [Références](#références)
 
@@ -65,7 +58,7 @@ Le projet vise à développer une plateforme e-commerce performante et sécuris�
 ### Description Générale
 La plateforme e-commerce est une application web complète et modulable conçue pour répondre aux besoins variés des utilisateurs. Elle repose sur :
 - **Un backend robuste** développé avec **Django**, couplé à une base de données relationnelle **MySQL**, garantissant la fiabilité des opérations et la gestion des données.
-- **Une architecture modulaire** conforme aux principes SOLID, facilitant la maintenabilité et l’extensibilité du projet.
+- **Une architecture modulaire** conforme aux principes SOLID et CLEAN CODE, facilitant la maintenabilité et l’extensibilité du projet.
 - **Un système multilingue générique**, permettant d’ajouter facilement de nouvelles langues pour une meilleure accessibilité.
 - **Un mécanisme de sécurité avancé**, intégrant le hachage des mots de passe et la gestion des rôles utilisateurs (Clients, Administrateurs, Fournisseurs).
 - **Des fonctionnalités sur mesure** :
@@ -165,7 +158,7 @@ Le diagramme de cas d'utilisation ci-dessous représente les principales interac
 ---
 
 
-## Fonctionnalités
+## Description Fonctionnelle
 
 ### Utilisateurs et Rôles
 
@@ -198,6 +191,34 @@ Le fournisseur peut :
 - Recevoir des notifications pour les commandes des clients.
 - Gérer les stocks et voir les alertes en cas de rupture de stock.
 - Télécharger un rapport des ventes mensuelles pour ses produits.
+
+---
+
+
+## Description Non-Fonctionnelle
+
+### Exigences Techniques
+1. **Architecture** :
+   - Basée sur le framework Django (MVC/MVT).
+   - Structure modulaire et réutilisable avec des apps Django.
+
+2. **Performance** :
+   - Temps de réponse inférieur à 2 secondes pour toutes les requêtes utilisateur.
+
+3. **Sécurité** :
+   - Hachage sécurisé des mots de passe avec la fonction de hachage Python (`hashlib`).
+   - Validation des entrées utilisateur pour prévenir les failles courantes telles que les injections SQL et XSS.
+   - Utilisation de Django pour la gestion des sessions et de l’authentification.
+   - Prévention des attaques CSRF et XSS via les middlewares Django.
+
+5. **Portabilité** :
+   - Compatible avec les principaux navigateurs (Chrome, Firefox, Edge).
+   - Déploiement sur des serveurs web comme Nginx ou Apache avec Gunicorn.
+
+6. **Base de Données** :
+   - MySQL pour la base relationnelle.
+
+
 
 ---
 
@@ -248,11 +269,47 @@ Cette approche garantit un suivi rigoureux du développement et facilite la coll
 
 ### Prérequis
 
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
+
+- **Python 3.9 ou supérieur** : Nécessaire pour exécuter le backend.
+- **Pip** : Gestionnaire de packages Python.
+- **MySQL** : Base de données utilisée pour stocker les informations du projet.
+- **Un éditeur de texte/IDE** : Recommandé, comme Visual Studio Code.
+
 ### Installation et Configuration
 
----
+Suivez ces étapes pour configurer et exécuter le projet localement.
 
-## Gestion Multilingue
+1. Décompressez le projet
+
+Téléchargez et décompressez l'archive contenant les fichiers du projet. Ensuite, ouvrez le terminal dans le répertoire principal à l'aide de Visual Studio Code ou d'un autre éditeur.
+
+2. Importez la base de données
+
+Exécutez la commande suivante pour importer la base de données à partir du fichier `gestepice.sql` :
+
+```bash
+mysql -u root -p gesteprice < base.sql
+````
+
+3. Installez les dépendances
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Effectuez les migrations de la base de données
+
+```bash
+python manage.py makemigrations
+```
+
+5. Lancez le serveur
+```bash
+python manage.py runserver
+```
+Maintenant, vous pouvez accéder à l'application en visitant http://localhost:8000 dans votre navigateur web.
+
 
 ---
 
