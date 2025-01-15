@@ -1,5 +1,54 @@
 # Projet e-Commerce
 
+## Table des Matières
+
+1. [Introduction](#introduction)
+   - [Objectifs du Projet](#objectifs-du-projet)
+   - [Description Générale](#description-générale)
+2. [Technologies et Outils Utilisés](#technologies-et-outils-utilisés)
+3. [Architecture et Design](#architecture-et-design)
+   - [Diagramme de Classes](#diagramme-de-classes)
+   - [Diagramme de Cas d'Utilisation](#diagramme-de-cas-dutilisation)
+4. [Fonctionnalités](#fonctionnalités)
+   - [Client](#client)
+   - [Administrateur](#administrateur)
+   - [Fournisseur](#fournisseur)
+5. [Bonnes Pratiques de Développement](#bonnes-pratiques-de-développement)
+   - [Patrons de Conception](#patrons-de-conception)
+   - [Conformité à SOLID et Clean Code](#conformité-à-solid-et-clean-code)
+   - [Conformité à PEP8](#conformité-à-pep8)
+   - [Utilisation de Linters](#utilisation-de-linters)
+   - [Git Workflow](#git-workflow)
+   - [Tests Unitaires](#tests-unitaires)
+6. [Prérequis](#prérequis)
+7. [Installation et Configuration](#installation-et-configuration)
+   - [Étapes d'Installation](#étapes-dinstallation)
+   - [Configuration de la Base de Données](#configuration-de-la-base-de-données)
+8. [Gestion Multilingue](#gestion-multilingue)
+9. [Hachage des Mots de Passe](#hachage-des-mots-de-passe)
+   - [Fichier `.properties`](#fichier-properties)
+   - [Hachage des Utilisateurs](#hachage-des-utilisateurs)
+10. [Captures d'Écran](#captures-décran)
+11. [Base de Données](#base-de-données)
+    - [Modèle Conceptuel](#modèle-conceptuel)
+    - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
+12. [API et Points de Terminaison](#api-et-points-de-terminaison)
+    - [Endpoints Client](#endpoints-client)
+    - [Endpoints Admin](#endpoints-admin)
+    - [Endpoints Fournisseur](#endpoints-fournisseur)
+13. [Système de Build](#système-de-build)
+14. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
+15. [Déploiement](#déploiement)
+    - [Environnement de Production](#environnement-de-production)
+    - [Hébergement](#hébergement)
+16. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
+17. [Annexes](#annexes)
+    - [Ressources Utilisées](#ressources-utilisées)
+    - [Références](#références)
+   
+---
+
+
 ## Objectif Principal
 Créer une plateforme e-commerce complète et professionnelle en appliquant les bonnes pratiques de développement logiciel et en respectant les principes de conception orientée objet. Le projet doit inclure une architecture robuste et modulaire qui garantit l'évolutivité, la maintenabilité et la sécurité.
 
