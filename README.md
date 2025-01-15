@@ -100,10 +100,6 @@ Le projet repose sur une stack technologique moderne et des outils robustes pour
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)&nbsp;![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)&nbsp;![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 - ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-### Sécurité
-- **bcrypt** : Utilisé pour le hachage des mots de passe.
-- **Validation des entrées utilisateur** : Implémentée pour protéger contre les failles courantes telles que les injections SQL et XSS.
-
 ### Outils DevOps et Build
 - ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 - ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -114,6 +110,10 @@ Le projet repose sur une stack technologique moderne et des outils robustes pour
 ### Tests et Qualité
 - ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 - ![Flake8](https://img.shields.io/badge/Flake8-blue?style=for-the-badge&logo=python&logoColor=white)
+
+### Sécurité
+- ![Fonctionde hachage de Python](https://img.shields.io/badge/Fonction-hachage-de-Python-lightgrey?style=flat)
+- ![Validation des Entrées](https://img.shields.io/badge/Validation-Sécurisée-lightgrey?style=flat)
 
 ### Outils Supplémentaires
 - ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
