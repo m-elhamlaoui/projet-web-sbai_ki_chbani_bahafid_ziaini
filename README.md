@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-# # GestEpice : Plateforme de Vente de Produits pour les Étudiants de l'INPT
+# GestEpice : Plateforme de Vente de Produits pour les Étudiants de l'INPT
 
 # [Video Démonstration](https://drive.google.com/file/d/1ANz-nvzCub14DQWWOA09ZG-OSu8fzNpx/view?usp=drive_link)
 Si le lien ne marche pas, considérez de copier lien et de le coller dans la barre de recherche.
