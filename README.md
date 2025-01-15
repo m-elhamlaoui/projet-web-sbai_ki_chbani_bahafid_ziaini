@@ -35,7 +35,7 @@ Si le lien ne marche pas, considérez de copier lien et de le coller dans la bar
 11. [Base de Données](#base-de-données)
     - [Modèle Conceptuel](#modèle-conceptuel)
     - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
-12. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
+12. [Les Contibuteurs](#les-contributeurs)
 
    
 ---
@@ -460,6 +460,12 @@ Cette section présente un aperçu visuel de l’application e-commerce, illustr
    <img src="Screenshots/13.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
 </div>
 
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
+
 ---
 
 ## Base de Données
@@ -486,17 +492,16 @@ Le diagramme ci-dessus représente les relations principales :
 - **Produit ⇾ Note & Recommandation** : Liens pour les avis et suggestions.
 - Gestion des permissions et sessions via les tables Django intégrées.
 
+<div align="right">
 
+[⬆ Back to top](#top)
 
-
-
-
-
+</div>
 
 ---
 
 
-## Les contributeurs
+## Les Contributeurs
 <div style="display: flex; gap: 30px; justify-content: center; align-items: center; text-align: center; flex-wrap: wrap;">
   <div>
     <a href="https://github.com/s4l4h">
@@ -529,7 +534,6 @@ Le diagramme ci-dessus représente les relations principales :
     </a>
   </div>
 </div>
-
 
 
 
