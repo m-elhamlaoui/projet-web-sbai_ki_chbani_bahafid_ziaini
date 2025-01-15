@@ -11,7 +11,7 @@
 3. [Architecture et Design](#architecture-et-design)
    - [Diagramme de Classes](#diagramme-de-classes)
    - [Diagramme de Cas d'Utilisation](#diagramme-de-cas-dutilisation)
-4. [Fonctionnalités](##description-fonctionnelle)
+4. [Description Fonctionnelle](##description-fonctionnelle)
    - [Client](#client)
    - [Administrateur](#administrateur)
    - [Fournisseur](#fournisseur)
