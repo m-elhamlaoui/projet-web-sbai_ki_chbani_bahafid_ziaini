@@ -37,9 +37,6 @@ Si le lien ne marche pas, considérez de copier lien et de le coller dans la bar
     - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
 12. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
 13. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
-14. [Annexes](#annexes)
-    - [Ressources Utilisées](#ressources-utilisées)
-    - [Références](#références)
 
    
 ---
@@ -457,7 +454,7 @@ Cette section présente un aperçu visuel de l’application e-commerce, illustr
    <h3>Détails de Commande</h3>
    <img src="Screenshots/10.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
    <h3>Produits et Catégories</h3>
-   <img src="Screenshots11.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <img src="Screenshots/11.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
    <h3>Produits INPTistes</h3>
    <img src="Screenshots/12.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
    <h3>Liste des Conversations</h3>
@@ -474,11 +471,40 @@ Cette section présente un aperçu visuel de l’application e-commerce, illustr
 
 
 ## Les contributeurs
-<a href="https://github.com/Wissal-Chbani"><img src="https://avatars.githubusercontent.com/u/145983090?s=400&u=258f7ed3cbdd8558b75a0da87779aa0fdc3b3aec&v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
-<a href="https://github.com/Kahisorow"><img src="https://avatars.githubusercontent.com/u/143226494?v=4" width="50" style="border-radius: 50%;" alt="User2"/></a>
-<a href="https://github.com/Alidou26"><img src="https://avatars.githubusercontent.com/u/103902987?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
-<a href="https://github.com/Dsaerex"><img src="https://avatars.githubusercontent.com/u/161311089?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
-<a href="https://github.com/s4l4h"><img src="https://avatars.githubusercontent.com/u/148199664?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
+<div style="display: flex; gap: 30px; justify-content: center; align-items: center; text-align: center; flex-wrap: wrap;">
+  <div>
+    <a href="https://github.com/s4l4h">
+      <img src="https://avatars.githubusercontent.com/u/148199664?v=4" width="50" style="border-radius: 50%;" alt="Salah"/>
+      <p>BAHAFID Salah Eddine</p>
+    </a>
+  </div>
+  <div>
+    <a href="https://github.com/Wissal-Chbani">
+      <img src="https://avatars.githubusercontent.com/u/145983090?s=400&u=258f7ed3cbdd8558b75a0da87779aa0fdc3b3aec&v=4" width="50" style="border-radius: 50%;" alt="Wissal Chbani"/>
+      <p>CHBANI Wissal</p>
+    </a>
+  </div>
+  <div>
+    <a href="https://github.com/Alidou26">
+      <img src="https://avatars.githubusercontent.com/u/103902987?v=4" width="50" style="border-radius: 50%;" alt="Alidou"/>
+      <p>KI Alidou</p>
+    </a>
+  </div>
+  <div>
+    <a href="https://github.com/Kahisorow">
+      <img src="https://avatars.githubusercontent.com/u/143226494?v=4" width="50" style="border-radius: 50%;" alt="Kahisorow"/>
+      <p>SBAI Yahia</p>
+    </a>
+  </div>
+  <div>
+    <a href="https://github.com/Dsaerex">
+      <img src="https://avatars.githubusercontent.com/u/161311089?v=4" width="50" style="border-radius: 50%;" alt="Dsaerex"/>
+      <p>ZIANI Zakaria</p>
+    </a>
+  </div>
+</div>
+
+
 
 
 <div align="right">
