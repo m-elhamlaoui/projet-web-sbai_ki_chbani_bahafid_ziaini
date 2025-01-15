@@ -20,15 +20,15 @@
    - [Utilisation de Linters](#utilisation-de-linters)
    - [Git Workflow](#git-workflow)
    - [Tests Unitaires](#tests-unitaires)
-6. [Structure du backend](#backend-structure)
-7. [Prise en Main](#getting-started)
+6. [Structure du Backend](#structure-du-backend)
+7. [Prise en Main](#prise-en-main)
    - [Prérequis](#prérequis)
    - [Installation et Configuration](#installation-et-configuration)
 8. [Gestion Multilingue](#gestion-multilingue)
 9. [Hachage des Mots de Passe](#hachage-des-mots-de-passe)
    - [Fichier `.properties`](#fichier-properties)
    - [Hachage des Utilisateurs](#hachage-des-utilisateurs)
-10. [Aperçu de l’Application](#captures-décran)
+10. [Aperçu de l’Application](#aperçu-de-lapplication)
 11. [Base de Données](#base-de-données)
     - [Modèle Conceptuel](#modèle-conceptuel)
     - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
@@ -45,6 +45,7 @@
 17. [Annexes](#annexes)
     - [Ressources Utilisées](#ressources-utilisées)
     - [Références](#références)
+
    
 ---
 
