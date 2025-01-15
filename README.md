@@ -443,6 +443,26 @@ Cette section présente un aperçu visuel de l’application e-commerce, illustr
    <img src="Screenshots/2.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
    <h3>Section de Contact et Localisation</h3>
    <img src="Screenshots/3.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Panier d'Achat des Utilisateurs</h3>
+   <img src="Screenshots/4.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Page de Connexion et d'Inscription</h3>
+   <img src="Screenshots/5.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Formulaire d'Inscription</h3>
+   <img src="Screenshots/6.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Interface de Messagerie</h3>
+   <img src="Screenshots/7.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Tableau de Bord Administratif</h3>
+   <img src="Screenshots/8.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Gestion des Utilisateurs</h3>
+   <img src="Screenshots/9.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Détails de Commande</h3>
+   <img src="Screenshots/10.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Produits et Catégories</h3>
+   <img src="Screenshots11.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Produits INPTistes</h3>
+   <img src="Screenshots/12.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+   <h3>Liste des Conversations</h3>
+   <img src="Screenshots/13.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
 </div>
 
 
