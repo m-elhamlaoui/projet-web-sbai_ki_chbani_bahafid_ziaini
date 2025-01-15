@@ -32,10 +32,9 @@
 11. [Base de Données](#base-de-données)
     - [Modèle Conceptuel](#modèle-conceptuel)
     - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
-12. [Système de Build](#système-de-build)
-13. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
-14. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
-15. [Annexes](#annexes)
+12. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
+13. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
+14. [Annexes](#annexes)
     - [Ressources Utilisées](#ressources-utilisées)
     - [Références](#références)
 
@@ -443,7 +442,7 @@ Maintenant, vous pouvez accéder à l'application en visitant http://localhost:8
 ---
 
 
-## les contributeurs:
+## Les contributeurs
 <a href="https://github.com/Wissal-Chbani"><img src="https://avatars.githubusercontent.com/u/145983090?s=400&u=258f7ed3cbdd8558b75a0da87779aa0fdc3b3aec&v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
 <a href="https://github.com/Kahisorow"><img src="https://avatars.githubusercontent.com/u/143226494?v=4" width="50" style="border-radius: 50%;" alt="User2"/></a>
 <a href="https://github.com/Alidou26"><img src="https://avatars.githubusercontent.com/u/103902987?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
