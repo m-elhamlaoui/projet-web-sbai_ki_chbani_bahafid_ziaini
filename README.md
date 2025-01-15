@@ -211,7 +211,7 @@ Les **patrons de conception** tels que Singleton, DAO, et MVC ont été utilisé
 Le code respecte les principes **SOLID** pour assurer une architecture robuste et scalable, tout en suivant les pratiques **Clean Code** pour améliorer la lisibilité et réduire les erreurs.
 
 ### Conformité à PEP8
-Tout le code Python suit les normes **PEP8** **[SOLID](https://peps.python.org/pep-0008/)** pour garantir un style cohérent, ce qui facilite la collaboration en équipe et réduit les problèmes liés au formatage.
+Tout le code Python suit les normes **PEP8** **[REFERENCE](https://peps.python.org/pep-0008/)** pour garantir un style cohérent, ce qui facilite la collaboration en équipe et réduit les problèmes liés au formatage.
 
 ### Utilisation de Linters
 Des **linters**, comme **Flake8**, ont été intégrés dans le processus de développement pour :
