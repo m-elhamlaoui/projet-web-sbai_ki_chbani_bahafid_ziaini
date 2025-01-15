@@ -165,7 +165,7 @@ Le diagramme de cas d'utilisation ci-dessous représente les principales interac
 ---
 
 
-## Description Fonctionnelle
+## Fonctionnalités
 
 ### Utilisateurs et Rôles
 
@@ -200,6 +200,84 @@ Le fournisseur peut :
 - Télécharger un rapport des ventes mensuelles pour ses produits.
 
 ---
+
+
+## Bonnes Pratiques de Développement
+
+### Patrons de Conception
+Les **patrons de conception** tels que Singleton, DAO, et MVC ont été utilisés pour structurer le code de manière modulaire, facilitant la réutilisation et la maintenabilité.
+
+### Conformité à SOLID et Clean Code
+Le code respecte les principes **SOLID** pour assurer une architecture robuste et scalable, tout en suivant les pratiques **Clean Code** pour améliorer la lisibilité et réduire les erreurs.
+
+### Conformité à PEP8
+Tout le code Python suit les normes **PEP8** **[SOLID](https://peps.python.org/pep-0008//SOLID)** pour garantir un style cohérent, ce qui facilite la collaboration en équipe et réduit les problèmes liés au formatage.
+
+### Utilisation de Linters
+Des **linters**, comme **Flake8**, ont été intégrés dans le processus de développement pour :
+- Vérifier la conformité au style de code (PEP8).
+- Identifier les erreurs potentielles avant l'exécution.
+- Maintenir un code de haute qualité.
+
+### Git Workflow
+Un workflow Git rigoureux a été mis en place :
+- **main** : Code stable.
+- **dev** : Développement actif.
+- Branches dédiées pour chaque fonctionnalité, avec des **pull requests** pour validation.
+- **Intégration des commits avec les résultats des linters** pour garantir une qualité constante.
+
+### Tests Unitaires
+Des tests unitaires, développés avec **pytest**, ont été mis en place pour vérifier les fonctionnalités clés. Ces tests garantissent la fiabilité du code et détectent les éventuelles régressions avant le déploiement.
+
+### Gestion des Issues GitHub
+Les **issues GitHub** ont été utilisées pour organiser et structurer les tâches du projet. Chaque issue a été :
+- **Taguée** selon son type (bug, feature, enhancement).
+- **Testée et documentée** avant d’être fermée.
+- Liée à la branche associée pour assurer une traçabilité et une intégration propre dans le code.
+
+Cette approche garantit un suivi rigoureux du développement et facilite la collaboration en équipe.
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Description Non-Fonctionnelle
 
