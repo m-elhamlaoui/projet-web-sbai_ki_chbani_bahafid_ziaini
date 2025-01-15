@@ -76,7 +76,11 @@ La plateforme e-commerce est une application web complète et modulable conçue 
 Ce projet est conçu pour être à la fois performant, maintenable et facilement déployable dans un environnement de production.
 
 
-[⬆️ Back to top](#top)
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
 
 
 ---
