@@ -436,6 +436,11 @@ Maintenant, vous pouvez accéder à l'application en visitant http://localhost:8
 
 ## Aperçu de l’Application
 
+Cette section présente un aperçu visuel de l’application e-commerce, illustrant ses principales fonctionnalités et interfaces utilisateur. Les captures d’écran suivantes mettent en évidence l'expérience utilisateur pour les différents rôles : Client, Administrateur, et Fournisseur.
+
+### Page d'Accueil - Vue Client
+<img src="screenshots/1.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
+
 
 
 
