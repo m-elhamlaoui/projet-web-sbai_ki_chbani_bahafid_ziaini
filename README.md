@@ -88,8 +88,8 @@ Le projet repose sur une stack technologique moderne et des outils robustes pour
 - ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ### Frontend
-- **HTML5, CSS3, JavaScript** : Langages de base pour la création d’une interface utilisateur simple et responsive.
-- **Bootstrap** : Framework CSS pour accélérer le développement de l’interface utilisateur (si applicable).
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)&nbsp;![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)&nbsp;![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ### Sécurité
 - **bcrypt** : Utilisé pour le hachage des mots de passe.
