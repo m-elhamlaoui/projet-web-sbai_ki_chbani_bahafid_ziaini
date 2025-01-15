@@ -461,6 +461,33 @@ Cette section présente un aperçu visuel de l’application e-commerce, illustr
    <img src="Screenshots/13.png" style="width: 80%; max-width: 600px; height: auto; display: block; margin: 20px auto; border: 2px solid #ccc; border-radius: 10px;" alt="Aperçu de l'image">
 </div>
 
+---
+
+## Base de Données
+
+### Modèle Conceptuel
+Le modèle conceptuel se compose des entités principales suivantes :
+- **Users** : Gestion des utilisateurs (nom, email, rôle, etc.).
+- **Admin** : Informations des administrateurs (pseudo, photo, etc.).
+- **Produit** : Détails des produits (nom, prix, description, etc.).
+- **Catégorie** : Classification des produits.
+- **Commande** : Historique des commandes.
+- **Messages** : Échange de messages entre utilisateurs.
+- **Facture** : Suivi des paiements.
+- **Recommandations** : Suggestions basées sur les interactions utilisateur.
+
+### Diagramme Entité-Relation (ERD)
+<div style="text-align: center;">
+  <img src="Screenshots/14.jpeg" alt="Diagramme Entité-Relation" width="70%" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+</div>
+
+Le diagramme ci-dessus représente les relations principales :
+- **Catégorie ⇾ Produit** : Une catégorie contient plusieurs produits.
+- **Users ⇾ Commande ⇾ Facture** : Un utilisateur peut effectuer plusieurs commandes, chacune liée à une facture.
+- **Produit ⇾ Note & Recommandation** : Liens pour les avis et suggestions.
+- Gestion des permissions et sessions via les tables Django intégrées.
+
+
 
 
 
