@@ -50,10 +50,107 @@
 ---
 
 
-## Objectif Principal
-Créer une plateforme e-commerce complète et professionnelle en appliquant les bonnes pratiques de développement logiciel et en respectant les principes de conception orientée objet. Le projet doit inclure une architecture robuste et modulaire qui garantit l'évolutivité, la maintenabilité et la sécurité.
+## Introduction
+
+### Objectifs du Projet
+Le projet vise à développer une plateforme e-commerce performante et sécurisée, capable de répondre aux besoins de trois types d’utilisateurs principaux : les Clients, les Administrateurs, et les Fournisseurs. Les principaux objectifs sont :
+- **Fournir une expérience utilisateur intuitive** grâce à une interface simple et fluide.
+- **Automatiser les processus métiers** comme la gestion des produits, commandes et rapports.
+- **Assurer la sécurité des données** en utilisant des techniques modernes de chiffrement et de gestion des utilisateurs.
+- **Permettre une évolutivité facile** en adoptant une architecture modulaire et conforme aux bonnes pratiques.
+- **Faciliter l’intégration multilingue** pour rendre la plateforme accessible à un large public.
+
+### Description Générale
+La plateforme e-commerce est une application web complète et modulable conçue pour répondre aux besoins variés des utilisateurs. Elle repose sur :
+- **Un backend robuste** développé avec **Django**, couplé à une base de données relationnelle **MySQL**, garantissant la fiabilité des opérations et la gestion des données.
+- **Une architecture modulaire** conforme aux principes SOLID, facilitant la maintenabilité et l’extensibilité du projet.
+- **Un système multilingue générique**, permettant d’ajouter facilement de nouvelles langues pour une meilleure accessibilité.
+- **Un mécanisme de sécurité avancé**, intégrant le hachage des mots de passe et la gestion des rôles utilisateurs (Clients, Administrateurs, Fournisseurs).
+- **Des fonctionnalités sur mesure** :
+  - **Pour les Clients** : Recherche de produits, gestion des commandes, et suivi des achats.
+  - **Pour les Administrateurs** : Gestion des produits et catégories, tableau de bord statistique, et interaction via le chat.
+  - **Pour les Fournisseurs** : Ajout de produits, suivi des commandes, et consultation des rapports de vente.
+
+Ce projet est conçu pour être à la fois performant, maintenable et facilement déployable dans un environnement de production.
+
 
 ---
+
+
+## Technologies et Outils Utilisés
+
+Le projet repose sur une stack technologique moderne et des outils robustes pour assurer sa performance, sa maintenabilité, et sa sécurité. Voici les principaux éléments utilisés :
+
+### Backend
+- ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+- ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+- ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
+- ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+
+### Frontend
+- **HTML5, CSS3, JavaScript** : Langages de base pour la création d’une interface utilisateur simple et responsive.
+- **Bootstrap** : Framework CSS pour accélérer le développement de l’interface utilisateur (si applicable).
+
+### Sécurité
+- **bcrypt** : Utilisé pour le hachage des mots de passe.
+- **Validation des entrées utilisateur** : Implémentée pour protéger contre les failles courantes telles que les injections SQL et XSS.
+
+### Outils DevOps et Build
+- ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+- ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+- **pip** : Gestionnaire de paquets Python pour installer les dépendances backend.
+- ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+- **Virtualenv** : Pour isoler l’environnement Python.
+
+### Tests et Qualité
+- **pytest** : Pour l’écriture et l’exécution des tests unitaires backend.
+- **Flake8** : Linter Python pour garantir la conformité au PEP8 et détecter les erreurs de code.
+
+### Déploiement
+- **Gunicorn** : Serveur WSGI pour le déploiement de l’application Django.
+- **Nginx** : Serveur web pour servir l’application et gérer les requêtes.
+- **Docker** : (Optionnel) Pour containeriser l’application et simplifier le déploiement.
+
+### Outils Supplémentaires
+- ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+- ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+- **PlantUML** : Utilisé pour générer les diagrammes UML (classes, cas d’utilisation, etc.).
+
+Cette combinaison de technologies garantit une application robuste, maintenable et facile à étendre.
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Description Fonctionnelle
 
