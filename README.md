@@ -134,7 +134,7 @@ Cette combinaison de technologies garantit une application robuste, maintenable 
 
 ### Diagramme de Classes
 
-*Description*
+*Description*  
 Le diagramme de classes ci-dessous représente la structure conceptuelle du projet e-commerce, en montrant les principales entités (Client, Admin, Supplier, Product, Order, Review, et Chat) ainsi que leurs relations. Il est essentiel pour comprendre l'organisation des données et des interactions dans le système.
 
 *Diagramme*
@@ -146,7 +146,7 @@ Le diagramme de classes ci-dessous représente la structure conceptuelle du proj
 
 ### Diagramme de Cas d'Utilisation
 
-*Description*
+*Description*  
 Le diagramme de cas d'utilisation ci-dessous représente les principales interactions entre les acteurs du système (Client, Admin, Supplier) et les fonctionnalités qu'ils peuvent effectuer. Les cas d'utilisation communs à plusieurs acteurs (comme "S'inscrire et se connecter" et "Contacter via le chat") sont également mis en évidence.
 
 *Diagramme*
