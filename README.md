@@ -137,6 +137,64 @@ Cette combinaison de technologies garantit une application robuste, maintenable 
 Le diagramme de classes ci-dessous représente la structure conceptuelle du projet e-commerce, en montrant les principales entités (Client, Admin, Supplier, Product, Order, Review, et Chat) ainsi que leurs relations. Il est essentiel pour comprendre l'organisation des données et des interactions dans le système.
 
 ### Diagramme
+<div style="text-align: center;">
+  <img src="https://www.plantuml.com/plantuml/png/jPN1RiCs38RlUGeZbsqOUkWr68eEtMaOrc5z086Lc9YOB7aadI0OzkwpOyQ9DNNe3iqXW7xzfibF5Fqi2gn35pVVD3_XdX8sscBp4WcJDZw2oERoVvN-sZJZx_k6mgwXfBOQ13b1Xxj6b2aTJEv1v9Gv539sGB6qSjvJHDUJru7BG2GE1cqnANbG70E-vnnja_50eiZVVcT2p0TAoshe0oWwUy4YGmYEyKXuMYH1ODzEpZ1ubKMVJ2vpGBvfFLDIH-cOoQ-3QdOUM6_E21xdnnVDjw3kHDew2DqbrxytwnFuST9N1p0hNyK_WBJl6JYu00gxvkUtrr-hE3j8SC05KgbxK3na9gpXApJH8M3IVySQ1OyYDmESEqnt1iQH88-lUuS8oUFTXlGvpOSmCfOAsRUXxoCXh-0kubVnfNJ4f9dFk-ON4ltXjxdcfy_riC5TWlmdMsNmVrIP8HtHfQoq9mzAETrsGpwbc24uWOZY6FlCMg5dUQ_WNRKwkmgtWEAP-Yc3aYYJ7ztxc45D4irZENyEa9JqV1_PUkrSn9XljHZeto-hfxiBQkrM3eXI3XXn9PSeNZcikyYKEWP_cPzkBLfmgJU5PeNeeCj3qf89w215tPuH58E3qJnLfDIXRHqm8O_ITM1LgfavhSenwN_NKweCEcQvUZXtKtD-fe0opvSMLjqt2_KS1LD0BhAnUr3A7Oh0eUnKmQG5q2MoiqVA6sPw2PanpdUkfLuszZdTFcwRXuTcsq4wRwr_TlCdGpRpScsn5XbDFYS5IlLGTdQZxSIaOonRs-xaUxmFnZ2Pva_C1o-q8LHtMGwxPJBBTJJNxIrCPflMuZJNgp0V9LAwP6Xp-cCgFUSZXS9PGJpHA4tbQ-qyPJqoDy-Omj35Vm00" alt="Diagramme de Classes" style="width:80%; height:auto;">
+</div>
+
+---
+
+## Diagramme de Cas d'Utilisation
+
+### Description
+Le diagramme de cas d'utilisation ci-dessous représente les principales interactions entre les acteurs du système (Client, Admin, Supplier) et les fonctionnalités qu'ils peuvent effectuer. Les cas d'utilisation communs à plusieurs acteurs (comme "S'inscrire et se connecter" et "Contacter via le chat") sont également mis en évidence.
+
+### Diagramme
+<div style="text-align: center;">
+  <img src="https://www.plantuml.com/plantuml/png/dLHBRjim4Dtx58Diicc0o7yNGH33YoAB0aNS782LnZ5RYbJvCNebdKCNwr0VIdGYBR8myCHvxmtvEFIJiKnRbukPm9C5gq3pjxE5Z6jCBLTonbAhD1m4Hsc16JYqA_iivz8lxDk5eoiAOcc_TfpDRk7L8AJCe85JS9WvWtuDNW-99zvyLna_UPKW7fV4p9dlQo13ABGwSN4p4CrhqGkcPzJ-HopZQPdZbW3JrD5MvPlI744vo9MzIqLL3ZqMjSV-jtBsse0vyf0SzP2_hFa_c354Tv8EfVASoGo7f5LawYYP2pTWdCUTFoZdlyZcmjD8lQxL1pgs4rul60XkBFhTXNPcgDZKYkUyq3nljtLYgNMQVEFikxiQYBUr-5jLQjzh603QFi2uuUvwYyETKMh6L6MiIEu_a1ZBB9sC_tNqSU6C5Y5ZvlnBCPr5wkJT9Xd77AKrTIfLQLt66Nr6gdv0c7whXM2KoDea1SThmQ8HL6MXPAOHcFlNyiB-oCk-JpKC_D1jEHo3Bv1tqwqS6A9hdiSZ5-zbDPsnSXhCc7OTnqL1g_IFlq-DALuKRzeoWTfYhDnqaVKqgIpjEmqlySEHJven-bcLzC2wl9q4pOf2QLiRNL3wTZwy0rae2QxBSEWKXikorAAEWn-y_cQYZhTScbHpZVvytaz9YLvODtgMgN0PWaRH7E3CY-W_Y1h2tTrZO_WL7XvuetXyfD9olBGQBwt7IvlnKh8RguqV8pndUiRZphk9flSJjMIYDf-eBJvraF22_CkPS5zDrDOJjQdejv-ybfUngJgqeYIWUK2BW9O1hG9Q1xJfNNPni_Zkzorh6z0keEI-XqaFvprS49pk4Yxcs16NFLprSDt3JG-t0PB_4yhCvU8_" alt="Diagramme de Cas d'Utilisation" style="width:80%; height:auto;">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Diagramme de Classes
+
+### Description
+Le diagramme de classes ci-dessous représente la structure conceptuelle du projet e-commerce, en montrant les principales entités (Client, Admin, Supplier, Product, Order, Review, et Chat) ainsi que leurs relations. Il est essentiel pour comprendre l'organisation des données et des interactions dans le système.
+
+### Diagramme
 ![Diagramme de classes](https://www.plantuml.com/plantuml/png/jPN1RiCs38RlUGeZbsqOUkWr68eEtMaOrc5z086Lc9YOB7aadI0OzkwpOyQ9DNNe3iqXW7xzfibF5Fqi2gn35pVVD3_XdX8sscBp4WcJDZw2oERoVvN-sZJZx_k6mgwXfBOQ13b1Xxj6b2aTJEv1v9Gv539sGB6qSjvJHDUJru7BG2GE1cqnANbG70E-vnnja_50eiZVVcT2p0TAoshe0oWwUy4YGmYEyKXuMYH1ODzEpZ1ubKMVJ2vpGBvfFLDIH-cOoQ-3QdOUM6_E21xdnnVDjw3kHDew2DqbrxytwnFuST9N1p0hNyK_WBJl6JYu00gxvkUtrr-hE3j8SC05KgbxK3na9gpXApJH8M3IVySQ1OyYDmESEqnt1iQH88-lUuS8oUFTXlGvpOSmCfOAsRUXxoCXh-0kubVnfNJ4f9dFk-ON4ltXjxdcfy_riC5TWlmdMsNmVrIP8HtHfQoq9mzAETrsGpwbc24uWOZY6FlCMg5dUQ_WNRKwkmgtWEAP-Yc3aYYJ7ztxc45D4irZENyEa9JqV1_PUkrSn9XljHZeto-hfxiBQkrM3eXI3XXn9PSeNZcikyYKEWP_cPzkBLfmgJU5PeNeeCj3qf89w215tPuH58E3qJnLfDIXRHqm8O_ITM1LgfavhSenwN_NKweCEcQvUZXtKtD-fe0opvSMLjqt2_KS1LD0BhAnUr3A7Oh0eUnKmQG5q2MoiqVA6sPw2PanpdUkfLuszZdTFcwRXuTcsq4wRwr_TlCdGpRpScsn5XbDFYS5IlLGTdQZxSIaOonRs-xaUxmFnZ2Pva_C1o-q8LHtMGwxPJBBTJJNxIrCPflMuZJNgp0V9LAwP6Xp-cCgFUSZXS9PGJpHA4tbQ-qyPJqoDy-Omj35Vm00)
 
 ---
