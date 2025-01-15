@@ -190,6 +190,13 @@ Le fournisseur peut :
 - Gérer les stocks et voir les alertes en cas de rupture de stock.
 - Télécharger un rapport des ventes mensuelles pour ses produits.
 
+
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
+
 ---
 
 
@@ -215,6 +222,13 @@ Le fournisseur peut :
 
 6. **Base de Données** :
    - MySQL pour la base relationnelle.
+
+
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
 
 
 ---
@@ -252,8 +266,14 @@ Django prend en charge l’internationalisation (**i18n**) pour développer des 
 6. **Ajout d’un sélecteur de langue** :
    - Une interface a été implémentée pour permettre aux utilisateurs de changer de langue facilement.
 
-### Résultat attendu
 L’application adapte son contenu à la langue préférée de l’utilisateur, offrant une expérience fluide et personnalisée.
+
+
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
 
 ---
 
@@ -292,6 +312,13 @@ Les **issues GitHub** ont été utilisées pour organiser et structurer les tâc
 - Liée à la branche associée pour assurer une traçabilité et une intégration propre dans le code.
 
 Cette approche garantit un suivi rigoureux du développement et facilite la collaboration en équipe.
+
+
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
 
 
 ---
@@ -341,6 +368,13 @@ projet/
 ---
 ````
 
+
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
+
 ---
 
 ## Prise en Main
@@ -389,6 +423,13 @@ python manage.py runserver
 Maintenant, vous pouvez accéder à l'application en visitant http://localhost:8000 dans votre navigateur web.
 
 
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
+
+
 --- 
 
 ## Aperçu de l’Application
@@ -405,8 +446,16 @@ Maintenant, vous pouvez accéder à l'application en visitant http://localhost:8
 ## les contributeurs:
 <a href="https://github.com/Wissal-Chbani"><img src="https://avatars.githubusercontent.com/u/145983090?s=400&u=258f7ed3cbdd8558b75a0da87779aa0fdc3b3aec&v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
 <a href="https://github.com/Kahisorow"><img src="https://avatars.githubusercontent.com/u/143226494?v=4" width="50" style="border-radius: 50%;" alt="User2"/></a>
+<a href="https://github.com/Alidou26"><img src="https://avatars.githubusercontent.com/u/103902987?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
 <a href="https://github.com/Dsaerex"><img src="https://avatars.githubusercontent.com/u/161311089?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
 <a href="https://github.com/s4l4h"><img src="https://avatars.githubusercontent.com/u/148199664?v=4" width="50" style="border-radius: 50%;" alt="User3"/></a>
+
+
+<div align="right">
+
+[⬆ Back to top](#top)
+
+</div>
 
 
 
