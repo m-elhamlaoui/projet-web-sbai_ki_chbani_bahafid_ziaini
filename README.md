@@ -35,8 +35,7 @@ Si le lien ne marche pas, considérez de copier lien et de le coller dans la bar
 11. [Base de Données](#base-de-données)
     - [Modèle Conceptuel](#modèle-conceptuel)
     - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
-12. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
-13. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
+12. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
 
    
 ---
@@ -477,7 +476,7 @@ Le modèle conceptuel se compose des entités principales suivantes :
 - **Recommandations** : Suggestions basées sur les interactions utilisateur.
 
 ### Diagramme Entité-Relation (ERD)
-<div style="text-align: center;">
+<div align="center" style="display: flex; justify-content: center; align-items: center; text-align: center;">
   <img src="Screenshots/14.jpeg" alt="Diagramme Entité-Relation" width="70%" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
 </div>
 
