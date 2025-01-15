@@ -23,18 +23,19 @@
    - [Utilisation de Linters](#utilisation-de-linters)
    - [Git Workflow](#git-workflow)
    - [Tests Unitaires](#tests-unitaires)
-7. [Structure du Backend](#structure-du-backend)
-8. [Prise en Main](#prise-en-main)
+7. [Multilingue](#multilingue)
+8. [Structure du Backend](#structure-du-backend)
+9. [Prise en Main](#prise-en-main)
    - [Prérequis](#prérequis)
    - [Installation et Configuration](#installation-et-configuration)
-9. [Aperçu de l’Application](#aperçu-de-lapplication)
-10. [Base de Données](#base-de-données)
+10. [Aperçu de l’Application](#aperçu-de-lapplication)
+11. [Base de Données](#base-de-données)
     - [Modèle Conceptuel](#modèle-conceptuel)
     - [Diagramme Entité-Relation (ERD)](#diagramme-entité-relation-erd)
-11. [Système de Build](#système-de-build)
-12. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
-13. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
-14. [Annexes](#annexes)
+12. [Système de Build](#système-de-build)
+13. [Versionnement et Suivi des Issues](#versionnement-et-suivi-des-issues)
+14. [Limites et Améliorations Futures](#limites-et-améliorations-futures)
+15. [Annexes](#annexes)
     - [Ressources Utilisées](#ressources-utilisées)
     - [Références](#références)
 
@@ -216,6 +217,43 @@ Le fournisseur peut :
    - MySQL pour la base relationnelle.
 
 
+---
+
+
+## Multilingue
+
+Django prend en charge l’internationalisation (**i18n**) pour développer des applications multilingues. Voici les étapes clés mises en œuvre pour intégrer le multilingue dans ce projet :
+
+1. **Marquage des chaînes de caractères** :
+   - Dans les **templates** : Les chaînes traduisibles sont entourées par `{% trans %}`.
+   - Dans le **code Python** : Les chaînes sont marquées avec `_()`.
+
+2. **Extraction des chaînes traduisibles** :
+   - La commande suivante a été utilisée pour générer les fichiers `.po` contenant les chaînes traduisibles :
+     ```bash
+     django-admin makemessages -l <code_langue>
+     ```
+     > Exemple : `django-admin makemessages -l fr` pour le français.
+
+3. **Ajout des traductions** :
+   - Les fichiers `.po` générés ont été remplis avec les traductions nécessaires.
+
+4. **Compilation des fichiers de traduction** :
+   - Les fichiers `.po` ont été compilés en fichiers `.mo` à l’aide de la commande suivante :
+     ```bash
+     django-admin compilemessages
+     ```
+
+5. **Sélection automatique de la langue** :
+   - Le **LocaleMiddleware** a été activé pour que Django sélectionne automatiquement la langue en fonction :
+     - Des préférences de l’utilisateur.
+     - De l’URL (si configuré).
+
+6. **Ajout d’un sélecteur de langue** :
+   - Une interface a été implémentée pour permettre aux utilisateurs de changer de langue facilement.
+
+### Résultat attendu
+L’application adapte son contenu à la langue préférée de l’utilisateur, offrant une expérience fluide et personnalisée.
 
 ---
 
