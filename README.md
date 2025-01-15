@@ -403,7 +403,7 @@ Téléchargez et décompressez l'archive contenant les fichiers du projet. Ensui
 Exécutez la commande suivante pour importer la base de données à partir du fichier `gestepice.sql` :
 
 ```bash
-mysql -u root -p gesteprice < base.sql
+mysql -u root -p gesteprice < gestepice.sql
 ````
 
 3. Installez les dépendances
