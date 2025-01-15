@@ -493,7 +493,6 @@ Le diagramme ci-dessus représente les relations principales :
 - **Catégorie ⇾ Produit** : Une catégorie contient plusieurs produits.
 - **Users ⇾ Commande ⇾ Facture** : Un utilisateur peut effectuer plusieurs commandes, chacune liée à une facture.
 - **Produit ⇾ Note & Recommandation** : Liens pour les avis et suggestions.
-- Gestion des permissions et sessions via les tables Django intégrées.
 
 <div align="right">
 
