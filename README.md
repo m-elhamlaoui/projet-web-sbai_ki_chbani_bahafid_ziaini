@@ -218,7 +218,6 @@ Le fournisseur peut :
 
 5. **Portabilité** :
    - Compatible avec les principaux navigateurs (Chrome, Firefox, Edge).
-   - Déploiement sur des serveurs web comme Nginx ou Apache avec Gunicorn.
 
 6. **Base de Données** :
    - MySQL pour la base relationnelle.
