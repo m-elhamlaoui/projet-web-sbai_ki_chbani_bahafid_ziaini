@@ -112,7 +112,7 @@ Le projet repose sur une stack technologique moderne et des outils robustes pour
 - ![Flake8](https://img.shields.io/badge/Flake8-blue?style=for-the-badge&logo=python&logoColor=white)
 
 ### Sécurité
-- ![Fonctionde hachage de Python](https://img.shields.io/badge/Fonction-hachage-de-Python-lightgrey?style=flat)
+- ![Python Hashing](https://img.shields.io/badge/Python-Hashing-lightgrey?style=flat&logo=python&logoColor=white)
 - ![Validation des Entrées](https://img.shields.io/badge/Validation-Sécurisée-lightgrey?style=flat)
 
 ### Outils Supplémentaires
