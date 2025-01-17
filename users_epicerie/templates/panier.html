@@ -1,0 +1,78 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+{% include 'link.html' %}
+
+ <link rel="stylesheet" href="{% static 'css/stylep.css' %}">
+ 
+  </head>
+  <body class="common-home res layout-1">
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+
+
+    {% include 'header.html' %}
+
+      
+      <!-- Main Container  -->
+
+
+          <div class="container">
+    
+    <div id="popover_content_wrapper">
+				<span id="cart_details">
+
+	
+        
+    	
+    </tr>
+    </table></div>
+
+       <div class="alert alert-danger alert-payement-danger" role="alert">   </div>
+
+        <div class="alert alert-success alert-payement-success" role="alert">   </div>
+                </span>
+				<div align="right">
+					<a href="#" class="btn btn-primary">
+                        <form id="payer">{% csrf_token %} {{ form.as_p }}
+					<span class="glyphicon glyphicon-shopping-cart"></span> <input type="submit" value="Payer" style="color:green;font-weight:bold;font-size:1.5rem;"></form>
+					</a>
+                    <a href="#" class="btn btn-primary">
+                        <form id="commander">{% csrf_token %} {{ form.as_p }}
+					<span class="glyphicon glyphicon-shopping-cart"></span> <input type="submit" value="commander" style="color:blue;font-weight:bold;font-size:1.5rem;"></form>
+					</a>
+					<a href="#" class="btn btn-default" id="clear_cart">
+					<span class="glyphicon glyphicon-trash"></span> Vider
+					</a>
+				</div>
+			</div>
+            </div>
+
+
+
+
+
+
+      <!-- //Main Container --> 
+      
+      
+      {% include 'modalProfil.html' %}
+
+
+      {% include 'footer.html' %}
+
+
+
+  </div>
+
+
+  {% include 'script.html' %}
+
+  <script src="{% static 'js/panier.js' %}"></script>
+  <script src="{% static 'js/payementPanier.js' %}"></script>
+  <script src="{% static 'js/commander.js' %}"></script>
+  
+
+  </body>
+</html>

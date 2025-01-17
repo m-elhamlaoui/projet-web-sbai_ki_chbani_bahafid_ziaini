@@ -1,0 +1,51 @@
+  {% load static %}
+  <div class="sidebar">
+      <div class="logo-details">
+        <img src="{% static 'image/logo.png' %}" alt="" srcset="">
+        <span class="logo_name">GestEpice</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="{% url 'dashboard' %}">
+            <i class='bx bx-grid-alt'></i>
+            <span class="links_name">DASHBOARD</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'produits' %}">
+            <i class='bx bx-box'></i>
+            <span class="links_name">PRODUITS</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'produits_inpt' %}">
+            <i class='bx bx-box'></i>
+            <span class="links_name">PRODUITS INPTISTES</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'commandes' %}">
+            <i class='bx bx-list-ul'></i>
+            <span class="links_name">COMMANDES</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'utilisateurs' %}">
+            <i class='bx bxs-user-pin'></i>
+            <span class="links_name">UTILISATEURS</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'chat_admin' %}">
+            <i class='bx bxs-user-pin'></i>
+            <span class="links_name">CHAT</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="{% url 'deconnexion_admin' %}">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">DECONNEXION</span>
+          </a>
+        </li>
+      </ul>
+    </div>
